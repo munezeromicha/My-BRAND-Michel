@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+body {
+  font-family: Work Sans;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.container {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background: var(--Gray-White, #fff);
+}
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 70%;
+  height: 550px;
+  padding: 50px;
+  border-radius: 16px;
+  background: var(--Gray-White, #fff);
+  box-shadow: 0px 36px 105px 0px rgba(43, 56, 76, 0.1);
+}
+.box1-title {
+  display: flex;
+  margin-top: -5%;
+  color: #a53dff;
+  font-family: "Work Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  word-break: break-all;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: auto;
+  width: 50%;
+}
+#name-2 {
+  color: #1e1e1e;
+  font-family: "Work Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+#pass-2 {
+  color: var(--Gray-500, #697484);
+  font-family: "Work Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.form-1 {
+  background-color: #000;
+  width: 70%;
+}
+input {
+  border: none;
+  border-bottom: 1px solid #a53dff;
+  font-size: 20px;
+}
+#btn-1 {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  font-family: Work Sans;
+  background-color: var(--Primary-500, #a53dff);
+  border: none;
+  color: #fff;
+  font-family: "Work Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+}
+#btn-1:hover {
+  color: #a53dff;
+  background-color: transparent;
+  border: 2px solid #a53dff;
+  transition: 0.5s ease-in-out;
+}
+#form-h {
+  display: flex;
+  color: #a53dff;
+  align-self: flex-end;
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .box-1 {
+    width: 100%;
+    margin: auto;
+  }
+  .form-1 {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+  .box1-title {
+    width: 100%;
+    margin: auto;
+    word-break: break-all;
+  }
+  label {
+    word-break: break-all;
+  }
+}
