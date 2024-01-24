@@ -5,6 +5,20 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
+#back-1{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+#link-1{
+  text-decoration: none;
+  font-size: 26px;
+  color: #a53dff;
+  font-weight: 500;
+}
 .container {
   display: flex;
   padding: 10px;

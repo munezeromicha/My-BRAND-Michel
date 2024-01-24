@@ -4,6 +4,9 @@
   --Body: #1c1e53;
   --Gray-500: #424e60;
 }
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +17,12 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
+#scroll-1{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
 .container-1 {
   display: flex;
   flex-direction: column;
@@ -23,11 +32,13 @@ body {
 }
 .logo-1 {
   display: flex;
+  align-self: center;
+  margin-left: 5%;
   float: left;
   gap: 12px;
 }
 nav {
-  width: 100%;
+  width: 75%;
 }
 .nav {
   display: flex;
@@ -296,7 +307,7 @@ li a {
   gap: 10px;
   border-radius: 4px;
   background: var(--Primary-500, #a53dff);
-  box-shadow: 0px 12px 64px 0px rgba(28, 25, 25, 0.12);
+  /* box-shadow: 0px 12px 64px 0px rgba(28, 25, 25, 0.12); */
 }
 .last-soc {
   display: flex;
@@ -1201,16 +1212,6 @@ li a {
   border-radius: 4px;
   background: var(--Gray-White, #fff);
 }
-.linkedin-1 {
-  display: flex;
-  padding: 15px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 4px;
-  background: var(--Gray-White, #fff);
-}
 .form-1 {
   display: flex;
   flex-direction: column;
@@ -1332,6 +1333,9 @@ li a {
     width: 100%;
     margin-right: 0;
     overflow-x: hidden;
+  }
+  .intro-1{
+    text-wrap: wrap;
   }
   .last-form-box9{
     width: 90%;
