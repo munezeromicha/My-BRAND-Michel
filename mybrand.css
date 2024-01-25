@@ -109,7 +109,7 @@ li a {
 .intro-1 {
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
+  gap: 15px;
   margin-top: 7%;
   color: var(--Gray-900, #132238);
   font-family: "Work Sans";
