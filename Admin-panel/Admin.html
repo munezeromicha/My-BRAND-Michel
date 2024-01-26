@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./Pictures/LG-1.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Admin.css">
 
     <title>Admin-panel</title>
@@ -20,13 +22,16 @@
             </div>
 
             <div class="search__container">
-                <input class="search__input" type="text" placeholder="Search"><i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+                <input class="search__input" type="text" placeholder="Search"><i class="fa-solid fa-magnifying-glass"
+                    id="search-btn"></i>
             </div>
             <i class="fa-solid fa-magnifying-glass" id="search-btn-2"></i>
             <span id="menu-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="25" viewBox="0 0 28 25" fill="none">
-                    <path d="M25.7895 20.5882C26.3572 20.5885 26.903 20.8067 27.3138 21.1977C27.7247 21.5886 27.9691 22.1223 27.9964 22.6881C28.0236 23.254 27.8317 23.8086 27.4604 24.2371C27.089 24.6655 26.5667 24.935 26.0017 24.9897L25.7895 25H2.21053C1.64284 24.9997 1.09702 24.7815 0.686167 24.3906C0.275316 23.9996 0.0309296 23.466 0.00364846 22.9001C-0.0236327 22.3343 0.168283 21.7797 0.539627 21.3512C0.910971 20.9227 1.43328 20.6532 1.99832 20.5985L2.21053 20.5882H25.7895ZM25.7895 10.2941C26.3757 10.2941 26.938 10.5265 27.3526 10.9402C27.7671 11.3539 28 11.915 28 12.5C28 13.085 27.7671 13.6461 27.3526 14.0598C26.938 14.4735 26.3757 14.7059 25.7895 14.7059H2.21053C1.62426 14.7059 1.062 14.4735 0.647448 14.0598C0.232894 13.6461 0 13.085 0 12.5C0 11.915 0.232894 11.3539 0.647448 10.9402C1.062 10.5265 1.62426 10.2941 2.21053 10.2941H25.7895ZM25.7895 0C26.3757 0 26.938 0.232405 27.3526 0.646088C27.7671 1.05977 28 1.62085 28 2.20588C28 2.79092 27.7671 3.35199 27.3526 3.76568C26.938 4.17936 26.3757 4.41176 25.7895 4.41176H2.21053C1.62426 4.41176 1.062 4.17936 0.647448 3.76568C0.232894 3.35199 0 2.79092 0 2.20588C0 1.62085 0.232894 1.05977 0.647448 0.646088C1.062 0.232405 1.62426 0 2.21053 0H25.7895Z" fill="black"/>
-                  </svg>
+                    <path
+                        d="M25.7895 20.5882C26.3572 20.5885 26.903 20.8067 27.3138 21.1977C27.7247 21.5886 27.9691 22.1223 27.9964 22.6881C28.0236 23.254 27.8317 23.8086 27.4604 24.2371C27.089 24.6655 26.5667 24.935 26.0017 24.9897L25.7895 25H2.21053C1.64284 24.9997 1.09702 24.7815 0.686167 24.3906C0.275316 23.9996 0.0309296 23.466 0.00364846 22.9001C-0.0236327 22.3343 0.168283 21.7797 0.539627 21.3512C0.910971 20.9227 1.43328 20.6532 1.99832 20.5985L2.21053 20.5882H25.7895ZM25.7895 10.2941C26.3757 10.2941 26.938 10.5265 27.3526 10.9402C27.7671 11.3539 28 11.915 28 12.5C28 13.085 27.7671 13.6461 27.3526 14.0598C26.938 14.4735 26.3757 14.7059 25.7895 14.7059H2.21053C1.62426 14.7059 1.062 14.4735 0.647448 14.0598C0.232894 13.6461 0 13.085 0 12.5C0 11.915 0.232894 11.3539 0.647448 10.9402C1.062 10.5265 1.62426 10.2941 2.21053 10.2941H25.7895ZM25.7895 0C26.3757 0 26.938 0.232405 27.3526 0.646088C27.7671 1.05977 28 1.62085 28 2.20588C28 2.79092 27.7671 3.35199 27.3526 3.76568C26.938 4.17936 26.3757 4.41176 25.7895 4.41176H2.21053C1.62426 4.41176 1.062 4.17936 0.647448 3.76568C0.232894 3.35199 0 2.79092 0 2.20588C0 1.62085 0.232894 1.05977 0.647448 0.646088C1.062 0.232405 1.62426 0 2.21053 0H25.7895Z"
+                        fill="black" />
+                </svg>
 
             </span>
             <div id="left-icon">
@@ -147,7 +152,7 @@
                                 <path
                                     d="M12 25.375C9.7 25.375 7.696 24.4538 5.988 22.6115C4.28 20.7692 3.30067 18.4682 3.05 15.7083H5.1C5.33333 17.8028 6.10433 19.5347 7.413 20.9042C8.72167 22.2736 10.2507 22.9583 12 22.9583C13.95 22.9583 15.6043 22.1379 16.963 20.497C18.3217 18.856 19.0007 16.8571 19 14.5C19 12.1437 18.321 10.1452 16.963 8.50425C15.605 6.86333 13.9507 6.04247 12 6.04167C10.85 6.04167 9.775 6.36389 8.775 7.00833C7.775 7.65278 6.93333 8.53889 6.25 9.66667H9V12.0833H3V4.83333H5V7.67292C5.85 6.38403 6.88767 5.38715 8.113 4.68229C9.33833 3.97743 10.634 3.625 12 3.625C13.25 3.625 14.421 3.91218 15.513 4.48654C16.605 5.0609 17.555 5.83585 18.363 6.81137C19.171 7.78851 19.8127 8.93643 20.288 10.2551C20.7633 11.5738 21.0007 12.9888 21 14.5C21 16.0104 20.7627 17.4254 20.288 18.7449C19.8133 20.0644 19.1717 21.2123 18.363 22.1886C17.5543 23.165 16.6043 23.9403 15.513 24.5147C14.4217 25.089 13.2507 25.3758 12 25.375ZM14.8 19.575L11 14.9833V8.45833H13V14.0167L16.2 17.8833L14.8 19.575Z"
                                     fill="#8E8E93" />
-                            </svg><a href="#">History</a></li>
+                            </svg><a href="#">Queries</a></li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="29" viewBox="0 0 24 29"
                                 fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -197,78 +202,88 @@
 
                 <div class="over-bar">
                     <div class="sec-over">
-                    <div class="bar-2">
-                        <h1 id="text-1"> Skills</h1>
-                        <!-- start pie chart -->
-                        <div class="piechart">
-                            <span class="name">Languges</span>
-                        </div>
-                        <!-- end pie chart -->
+                        <div class="bar-2">
+                            <h1 id="text-1"> Stats</h1>
+                            <!-- start legend-->
+                            <div id="over-hard">
+                                <div id="over-simple">
+                                    <div class="simple-1">
+                                        <h1 id="text-2">Blogs</h1>
+                                        <p id="text-p">350,897 <i class="fa-solid fa-blog"></i></p>
+                                    </div>
+                                    <div class="simple-2">
+                                        <h1 id="text-2">Queries</h1>
+                                        <p id="text-o">350,897 <i class="fa-solid fa-clipboard-question"></i></p>
+                                    </div>
+                                </div>
+                                <div id="over-simple">
+                                    <div class="simple-3">
+                                        <h1 id="text-2">Likes</h1>
+                                        <p id="text-p">350,897 <i class="fa-solid fa-thumbs-up"></i></i></p>
+                                    </div>
+                                    <div class="simple-4">
+                                        <h1 id="text-2">Comments</h1>
+                                        <p id="text-u">350,897 <i class="fa-solid fa-comments"></i></i></p>
+                                    </div>
+                                </div>
 
-                        <!-- start legend-->
-                        <div class="legend">
-                            <span class="legend-item-one">
-                                <small>JS</small>
-                            </span>
-                            <span class="legend-item-two">
-                                <small>CSS</small>
-                            </span>
-                            <span class="legend-item-three">
-                                <small>HTML</small>
-                            </span>
-                            <span class="legend-item-four">
-                                <small>Node js</small>
-                            </span>
-                        </div>
-                        <!-- end legend -->
-                    </div>
 
-                    <div class="bar-2">
-                        <h1 id="text-1"> Visitors</h1>
-                        <!-- start bar chart -->
-                        <div class="piechart-1">
-                            <span class="name"></span>
+                            </div>
+                            <!-- end legend -->
                         </div>
 
-                        <!-- start legend-->
-                        <div class="legend">
-                            <span class="legend-item-one-one">
-                                <small>Commenters</small>
-                            </span>
-                            <!-- <span class="legend-item-two">
+                        <div class="bar-2">
+                            <h1 id="text-1"> Visitors</h1>
+                            <!-- start bar chart -->
+                            <div class="piechart-1">
+                                <span class="name"></span>
+                            </div>
+
+                            <!-- start legend-->
+                            <div class="legend">
+                                <span class="legend-item-one-one">
+                                    <small>Commenters</small>
+                                </span>
+                                <!-- <span class="legend-item-two">
                                 <small>CSS</small>
                             </span>
                             <span class="legend-item-three">
                                 <small>HTML</small>
                             </span> -->
-                            <span class="legend-item-five">
-                                <small>Viewers</small>
-                            </span>
+                                <span class="legend-item-five">
+                                    <small>Viewers</small>
+                                </span>
+                            </div>
+                            <!-- end -->
                         </div>
-                        <!-- end -->
                     </div>
-                </div>
                     <div class="left-side">
                         <div class="comment">
                             <h1 class="com-1">Recent Messages</h1>
-            
+
                             <div class="com-2">
-                                <img src="./Pictures/Avatar Image-1.png" alt="img-1" class="av-1" width="50" height="50">
+                                <img src="./Pictures/Avatar Image-1.png" alt="img-1" class="av-1" width="50"
+                                    height="50">
                                 <span class="text-1">
                                     <p class="nom-1">Theresa Webb</p>
-                                    <p>Software development is a multifaceted process that involves the conception, design,
-                                        implementation, testing, and maintenance of computer programs and applications.</p>
+                                    <p>Software development is a multifaceted process that involves the conception,
+                                        design,
+                                        implementation, testing, and maintenance of computer programs and applications.
+                                    </p>
                                     <span class="sec-1">
                                         <a href="#" id="anc-1">Reply</a> . 23h
                                     </span>
                                 </span>
                             </div>
                             <div class="com-2">
-                                <img src="./Pictures/Avatar Image-3.png" alt="img-1" class="av-1" width="50" height="50">
+                                <img src="./Pictures/Avatar Image-3.png" alt="img-1" class="av-1" width="50"
+                                    height="50">
                                 <span class="text-1">
                                     <p class="nom-1">Justine</p>
-                                    <p>Software development is a multifaceted process that involves the conception, design,
-                                        implementation, testing, and maintenance of computer programs and applications.</p>
+                                    <p>Software development is a multifaceted process that involves the conception,
+                                        design,
+                                        implementation, testing, and maintenance of computer programs and applications.
+                                    </p>
                                     <span class="sec-1">
                                         <a href="#" id="anc-1">Reply</a> . 23h
                                     </span>
@@ -278,8 +293,10 @@
                                 <img src="./Pictures/Avatar Image.png" alt="img-1" class="av-1" width="50" height="50">
                                 <span class="text-1">
                                     <p class="nom-1">Obed</p>
-                                    <p>Software development is a multifaceted process that involves the conception, design,
-                                        implementation, testing, and maintenance of computer programs and applications.</p>
+                                    <p>Software development is a multifaceted process that involves the conception,
+                                        design,
+                                        implementation, testing, and maintenance of computer programs and applications.
+                                    </p>
                                     <span class="sec-1">
                                         <a href="#" id="anc-1">Reply</a> . 23h
                                     </span>
@@ -289,8 +306,10 @@
                                 <img src="./Pictures/Avatar Image.png" alt="img-1" class="av-1" width="50" height="50">
                                 <span class="text-1">
                                     <p class="nom-1">Micka</p>
-                                    <p>Software development is a multifaceted process that involves the conception, design,
-                                        implementation, testing, and maintenance of computer programs and applications.</p>
+                                    <p>Software development is a multifaceted process that involves the conception,
+                                        design,
+                                        implementation, testing, and maintenance of computer programs and applications.
+                                    </p>
                                     <span class="sec-1">
                                         <a href="#" id="anc-1">Reply</a> . 23h
                                     </span>
@@ -300,8 +319,10 @@
                                 <img src="./Pictures/Avatar Image.png" alt="img-1" class="av-1" width="50" height="50">
                                 <span class="text-1">
                                     <p class="nom-1">Jamarie</p>
-                                    <p>Software development is a multifaceted process that involves the conception, design,
-                                        implementation, testing, and maintenance of computer programs and applications.</p>
+                                    <p>Software development is a multifaceted process that involves the conception,
+                                        design,
+                                        implementation, testing, and maintenance of computer programs and applications.
+                                    </p>
                                     <span class="sec-1">
                                         <a href="#" id="anc-1">Reply</a> . 23h
                                     </span>
