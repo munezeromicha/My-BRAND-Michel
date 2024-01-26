@@ -4,15 +4,15 @@ body {
   overflow-x: hidden;
   background: var(--BG-Shade, #f5fcff);
 }
-.container {
+.container-1 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   width: 100%;
 }
 .box-1 {
   display: flex;
-  width: 89%;
+  width: 100%;
   height: 100px;
   padding: 0px 85.333px 0px;
   flex-direction: row;
@@ -63,7 +63,7 @@ body {
   font-weight: 600;
   line-height: 150%;
 }
-.search__container {
+.search__container-1 {
   display: flex;
   margin-left: -50%;
   gap: 20px;
@@ -195,154 +195,6 @@ li a {
   flex-direction: column;
   margin-right: 5%;
 }
-.box-3{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.bar-2{
-    width: 381px;
-height: 370.978px;
-flex-shrink: 0;
-border-radius: 10px;
-background: #FFF;
-/* border: 1px solid #000; */
-}
-#text-1{
-    display: flex;
-    margin-top: 5%;
-    margin-left: 5%;
-    color: #000;
-font-size: 17px;
-font-style: normal;
-font-weight: 600;
-line-height: 16px; /* 94.118% */
-}
-.piechart {
-    position: relative;
-    margin: 30px auto 0;
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    background-image: conic-gradient( #FFBA1C 0% 50%, #F17055 20% 70%, #5597F1 70% 100%, #9CF155 100% 100%);
-}
-.piechart-1 {
-    position: relative;
-    margin: 30px auto 0;
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    background-image: conic-gradient( #F1C655  0% 50%, #F15555  70% 100%);
-}
-.piechart:before {
-	content:"";
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    box-shadow: 0px 1px 50px rgb(0 0 0 / 8%);
-}
-.piechart .name{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    outline: 20px solid rgb(255 255 255 / 30%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.7rem;
-}
-
-.legend{
-    position: relative;
-    margin: 50px auto 0;
-    width: 400px;
-    display: flex;
-}
-.legend > span{
-	position:relative;
-    flex-grow: 1;
-    padding-left: 30px;
-}
-.legend > span.legend-item-one:before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #ffba1c;
-    outline: 5px solid rgb(255 186 28 / 30%);
-}
-.legend > span.legend-item-one-one:before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #F15555;
-    outline: 5px solid rgb(199 0 57 / 30%);
-}
-.legend > span.legend-item-two:before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #5597F1;
-    outline: 5px solid rgb(85 151 241  / 30%);
-}
-.legend > span.legend-item-three:before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #F17055;
-    outline: 5px solid rgb(241 90 85  / 30%);
-}
-.legend > span.legend-item-four:before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #9CF155;
-    outline: 5px solid rgb(241 90 85  / 30%);
-}
-.legend > span.legend-item-five:before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #F1C655;
-    outline: 5px solid rgb(241 198 85  / 30%);
-}
 .over-bar{
     display: flex;
     flex-direction: row;
@@ -409,6 +261,11 @@ background: #FFF;
     display: none;
   }
 @media (max-width: 998px){
+  .container{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
   .box-1{
     width: 100%;
   }
@@ -423,7 +280,7 @@ background: #FFF;
 
         width: 102rem;
     }
-    .search__container{
+    .search__container-1{
         display: none;
     }
 }
@@ -431,7 +288,7 @@ background: #FFF;
   .box-1{
     width: 100%;
   }
-    .search__container{
+    .search__container-1{
         display: none;
     }
 }
@@ -479,7 +336,7 @@ background: #FFF;
     gap: 20px;
     width: 40%;
 }
-  .container{
+  .container-1{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -508,22 +365,6 @@ background: #FFF;
     .bar-2{
         width: 100%;
         margin: auto;
-    }
-    .box-3{
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-    /* .over-bar{
-        display: flex;
-        flex-direction: column;
-    } */
-    .bar-1{
-      /* border: 1px solid #000; */
-      display: flex;
-      align-self: center;
-      justify-self: center;
-      width: 102rem;
     }
     .box-2{
         display: none;
@@ -559,3 +400,69 @@ background: #FFF;
 
 } */
 
+
+.box-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid #333; */
+    width: 78.5%;
+height: 915px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #FFF;
+}
+#text-1{
+    display: flex;
+    align-self: flex-start;
+    /* margin-top: -3%; */
+    margin-left: 5%;
+    color: #503AE7;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 56px; 
+z-index: 1;
+}
+.two-items{
+    display: inline-flex;
+    justify-self: flex-start;
+    align-self: flex-start;
+    gap: 15px;
+}
+.search__input-1 {
+    display: flex;
+    align-self: center;
+    width: 225%;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #f0f0f0;
+    border: none;
+    font-size: 15px;
+    /* z-index: -1; */
+  }
+  #add-1{
+    display: flex;
+padding: 12px 24px;
+cursor: pointer;
+gap: 12px;
+border-radius: 4px;
+background: var(--Primary-500, #A53DFF);
+color: #FFF;
+font-family: "Work Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; 
+border: none;
+}
+.add-over{
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-right: 29%;
+}
+.input-1{
+
+}
