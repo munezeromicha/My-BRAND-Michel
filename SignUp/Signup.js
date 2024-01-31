@@ -1,38 +1,7 @@
-// the beggining of slide function
-
-function toggleMenu() {
-    // alert("I am clicked!");
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-}
-function closeMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.remove('active');
-}
-
-function xScroll(horiz){
-    const first = document.querySelector('.box6-over')
-    const second = document.querySelector('.cont-box6-1').offsetWidth;
-    const third = document.querySelector('')
-
-    if(horiz == "next"){
-        first.scrollLeft += second + 10;
-    }
-    else if(horiz == "prev"){
-        first.scrollLeft -= second + 10;
-    }
-}
-
-// this the end of slide function
-
-// The beggining of form validation
-
 const form = document.getElementById('form')
-var userName = document.getElementById('inputOne')
-const email = document.getElementById('in_2')
-const locate = document.getElementById('in_3')
-const sub = document.getElementById('in_4')
-const mess = document.getElementById('in_5')
+var userName = document.getElementById('name_1')
+const email = document.getElementById('name_2')
+const locate = document.getElementById('name_3')
 const pass = document.getElementById('pass_1')
 const confirm = document.getElementById('pass_3')
 
@@ -65,8 +34,8 @@ function validateInputs(){
     const fullName = userName.value.trim();
     const inEmail = email.value.trim();
     const oneLocate = locate.value.trim();
-    const subJect = sub.value.trim();
-    const messValue = mess.value.trim();
+    const firstPass = pass.value.trim();
+    const secPass = confirm.value.trim();
 
     if(fullName === ''){
         verError(userName, 'Name field is required!');
@@ -94,20 +63,22 @@ function validateInputs(){
         verPass(locate);
     }
 
-    if(subJect === ''){
-        verError(sub, 'Subject field is required!')
+    if(firstPass === ''){
+        verError(pass, 'Password is required!')
+    }else if(firstPass.length < 8){
+        verError(pass, 'Password must be at least 8 character!')
     }
     else{
-        verPass(sub)
+        verPass(pass)
     }
 
-    if(messValue === ''){
-        verError(mess, 'Message field is required');
+    if(secPass === ''){
+        verError(confirm, 'Please confirm the password!');
+    }else if(secPass !== firstPass){
+        verError(confirm, 'Password does not match');
     }
     else{
-        verPass(mess);
+        verPass(confirm);
     }
 
 }
-
-// the end of form validation

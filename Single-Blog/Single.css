@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+.one{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 body {
   width: 100vw;
   height: 100vh;
@@ -316,26 +322,54 @@ line-height: 150%;
 label{
   color: #5e3bee;
 }
-#in-1 {
+#name_1{
   border: 1px solid #5e3bee;
   border-radius: 8px;
   height: 35px;
   font-size: 15px;
   width: 50%;
 }
-.in-2 {
+#name_1:focus{
+  outline: 0;
+}
+#email_1{
   border: 1px solid #5e3bee;
   border-radius: 8px;
   height: 35px;
   font-size: 15px;
   width: 50%;
 }
-.in-3{
+#email_1:focus{
+  outline: 0;
+}
+#mess{
   border: 0.5px solid #5e3bee;
   border-radius: 5px;
   height: 85px;
   font-size: 15px;
   width: 50%;
+}
+#mess:focus{
+  outline: 0;
+}
+::placeholder{
+  font-size: 13px;
+  color: #333;
+}
+.one.success input{
+  border-color: #09c372;
+}
+.one{
+  display: flex;
+  flex-direction: column;
+}
+.one.error{
+  border-color: #ff3860;
+}
+.one.error{
+  color: #ff3800;
+  font-size: 13px;
+  /* height: 13px; */
 }
 .last-btn {
   display: flex;
@@ -345,13 +379,14 @@ label{
   border-radius: 4px;
   background: var(--Primary-500, #5E3BEE);
   color: #fff;
-  font-family: Work Sans;
+  font-family: "Work Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
   border: none;
   width: 50%;
+  cursor: pointer;
 }
 .inside-1{
   display: flex;

@@ -1,40 +1,9 @@
-// the beggining of slide function
-
-function toggleMenu() {
-    // alert("I am clicked!");
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-}
-function closeMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.remove('active');
-}
-
-function xScroll(horiz){
-    const first = document.querySelector('.box6-over')
-    const second = document.querySelector('.cont-box6-1').offsetWidth;
-    const third = document.querySelector('')
-
-    if(horiz == "next"){
-        first.scrollLeft += second + 10;
-    }
-    else if(horiz == "prev"){
-        first.scrollLeft -= second + 10;
-    }
-}
-
-// this the end of slide function
-
-// The beggining of form validation
-
 const form = document.getElementById('form')
-var userName = document.getElementById('inputOne')
-const email = document.getElementById('in_2')
-const locate = document.getElementById('in_3')
-const sub = document.getElementById('in_4')
-const mess = document.getElementById('in_5')
-const pass = document.getElementById('pass_1')
-const confirm = document.getElementById('pass_3')
+var userName = document.getElementById('name_1')
+const email = document.getElementById('email_1')
+const locate = document.getElementById('mess')
+// const pass = document.getElementById('pass_1')
+// const confirm = document.getElementById('pass_3')
 
 form.addEventListener('submit', e =>{
     e.preventDefault();
@@ -65,11 +34,11 @@ function validateInputs(){
     const fullName = userName.value.trim();
     const inEmail = email.value.trim();
     const oneLocate = locate.value.trim();
-    const subJect = sub.value.trim();
-    const messValue = mess.value.trim();
+    // const firstPass = pass.value.trim();
+    // const secPass = confirm.value.trim();
 
     if(fullName === ''){
-        verError(userName, 'Name field is required!');
+        verError(userName, 'Fullname field is required!');
     } else if(fullName < 8){
         verError(userName, 'username must not be less than 8 character')
     }
@@ -88,26 +57,28 @@ function validateInputs(){
     }
 
     if(oneLocate === ''){
-        verError(locate, 'Location field is required!');
+        verError(locate, 'Comment field is required!');
     }
     else{
         verPass(locate);
     }
 
-    if(subJect === ''){
-        verError(sub, 'Subject field is required!')
-    }
-    else{
-        verPass(sub)
-    }
+    // if(firstPass === ''){
+    //     verError(pass, 'Password is required!')
+    // }else if(firstPass.length < 8){
+    //     verError(pass, 'Password must be at least 8 character!')
+    // }
+    // else{
+    //     verPass(pass)
+    // }
 
-    if(messValue === ''){
-        verError(mess, 'Message field is required');
-    }
-    else{
-        verPass(mess);
-    }
+    // if(secPass === ''){
+    //     verError(confirm, 'Please confirm the password!');
+    // }else if(secPass !== firstPass){
+    //     verError(confirm, 'Password does not match');
+    // }
+    // else{
+    //     verPass(confirm);
+    // }
 
 }
-
-// the end of form validation

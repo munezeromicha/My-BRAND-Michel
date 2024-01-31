@@ -31,18 +31,19 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-self: center;
   align-items: center;
   gap: 5px;
   width: 70%;
-  height: 550px;
-  padding: 50px;
+  height: 600px;
+  padding: 10px;
   border-radius: 16px;
   background: var(--Gray-White, #fff);
   box-shadow: 0px 36px 105px 0px rgba(43, 56, 76, 0.1);
 }
 .box1-title {
   display: flex;
-  margin-top: -5%;
+  margin-top: -3%;
   color: #a53dff;
   font-family: "Work Sans";
   font-size: 20px;
@@ -54,7 +55,7 @@ html {
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   margin: auto;
   width: 50%;
 }
@@ -65,6 +66,21 @@ form {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+#name_1:focus{
+  outline: 0;
+}
+#name_2:focus{
+  outline: 0;
+}
+#name_3:focus{
+  outline: 0;
+}
+#pass_1:focus{
+  outline: 0;
+}
+#pass_3:focus{
+  outline: 0;
 }
 #pass-2 {
   color: var(--Gray-500, #697484);
@@ -81,7 +97,18 @@ form {
 input {
   border: none;
   border-bottom: 1px solid #a53dff;
-  font-size: 20px;
+  font-size: 15px;
+  padding: 7px;
+}
+.one.success input{
+  border-color: #09c372;
+}
+.one{
+  display: flex;
+  flex-direction: column;
+}
+.one.error{
+  border-color: #ff3860;
 }
 #btn-1 {
   display: flex;
@@ -116,6 +143,12 @@ input {
   text-decoration: none;
   font-weight: 600;
 }
+.one.error{
+  color: #ff3800;
+  font-size: 13px;
+  /* height: 13px; */
+}
+
 @media (max-width: 768px) {
   .box-1 {
     width: 100%;
