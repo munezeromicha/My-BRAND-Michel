@@ -1,4 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+#mybtn{
+  display: flex;
+  gap: 15px;
+}
+
+#form-0{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.one.success input{
+  border-color: #09c372;
+}
+.one{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.one.error{
+  border-color: #ff3860;
+}
+.one.error{
+  color: #ff3800;
+  font-size: 13px;
+  /* height: 13px; */
+}
 body {
   font-family: "Work Sans";
   overflow-x: hidden;
@@ -231,17 +258,6 @@ background: #FFF;
     gap: 12px;
     width: 100%;
   }
-  /* .av-1{
-    display: flex;
-    border: 1px solid #000;
-    width: 5%;
-    height: 5%;
-    border-radius: 50%;
-  } */
-  .text-1{
-    display: flex;
-    flex-direction: column;
-  }
   .nom-1{
     color: #503AE7;
   font-size: 12px;
@@ -268,6 +284,9 @@ background: #FFF;
   }
   .box-1{
     width: 100%;
+  }
+  #find_1{
+    display: none;
   }
   #search-btn-2{
     display: block;
@@ -318,6 +337,12 @@ background: #FFF;
     }
 }
 @media (max-width: 768px) {
+  #search-btn{
+    display: none;
+  }
+  #find_1{
+    display: none;
+  }
   /* .av-1{
     display: flex;
     width: 5%;
@@ -371,6 +396,7 @@ background: #FFF;
     }
     #menu-1{
         display: block;
+        margin-right: -16%;
     }
     #inside-1{
         display: flex;
@@ -411,24 +437,25 @@ height: 915px;
 flex-shrink: 0;
 border-radius: 10px;
 background: #FFF;
+gap: 15px;
 }
 #text-1{
     display: flex;
-    align-self: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Work Sans";
     /* margin-top: -3%; */
-    margin-left: 5%;
-    color: #503AE7;
-font-size: 18px;
+    /* margin-left: 5%; */
+color: #503AE7; 
+font-size: 13px;
 font-style: normal;
 font-weight: 600;
 line-height: 56px; 
-z-index: 1;
+z-index: 1; 
 }
 .two-items{
-    display: inline-flex;
-    justify-self: flex-start;
-    align-self: flex-start;
-    gap: 15px;
+    display: flex;
 }
 .search__input-1 {
     display: flex;
