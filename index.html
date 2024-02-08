@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./Pictures/LG-1.png">
+    <link rel="stylesheet" href="./mybrand.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="./mybrand.js"></script>
+    <title>My brand</title>
+</head>
+
+<body>
+    <!-- <div class="color-1"></div> -->
+
+    <div class="container-1">
+        <div class="nav">
+            <img src="./Pictures/Logo.png" alt="myLogo" class="logo-1">
+            <div class="humb_1" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav class="menu">
+                <div class="close_1" onclick="toggleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <ul>
+                    <li><a href="#" id="home-1">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#lang">Language</a></li>
+                    <li><a href="#port-2">Portfolio</a></li>
+                    <li><a href="#blog-2">Blog</a></li>
+                    <li><a href="./LogIn/Login.html">Sign/Sign up</a></li>
+                    <li><a href="./Admin-panel/Admin.html">Admin</a></li>
+                    <li><button class="btn-1"><a href="#contact-2" id="contact-5">Contact me</a></button></li>
+                </ul>
+
+            </nav>
+
+
+        </div>
+        <div class="box-1">
+            <span class="intro-1">Hello, I’m<br>
+                MUNEZERO N.Michel
+                <h4 class="intro-2">Passionate software developer with a flair for creating elegant and efficient
+                    solutions.</h4>
+                <button class="btn-2">Say Hello</button>
+                <span class="boxes-3">
+                    <span class="back-1">
+                        <span class="sub-1">-1 Y.</span>
+                        <span class="sub-2">Experience</span>
+                    </span>
+
+                    <span class="back-2">
+                        <span class="sub-3">0</span>
+                        <span class="sub-4">Project Completed</span>
+                    </span>
+
+                    <span class="back-3">
+                        <span class="sub-5">0</span>
+                        <span class="sub-6">Happy Client</span>
+                    </span>
+                </span>
+            </span>
+
+            <img src="./Pictures/mySelf.png" alt="profile" class="mySelf-1">
+        </div>
+
+        <div class="box-2" id="about">
+            <!-- <div class="inside-box-2"> -->
+            <span class="icons-1">
+                <img src="./Pictures/2.png" alt="mySecond-Profile" class="pro-2">
+
+                <span class="cont-box2">
+                    <span class="fac-1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="20"
+                            viewBox="0 0 18 20" fill="none">
+                            <path
+                                d="M13.4866 0.25H10.43C8.61604 0.25 6.59845 1.02784 6.59845 3.70863C6.60731 4.64273 6.59845 5.53731 6.59845 6.54411H4.5V9.94872H6.66339V19.75H10.6387V9.88404H13.2626L13.5 6.53456H10.5702C10.5702 6.53456 10.5768 5.04457 10.5702 4.61187C10.5702 3.55248 11.6514 3.61314 11.7164 3.61314C12.2309 3.61314 13.2313 3.61467 13.4881 3.61314V0.25H13.4866Z"
+                                fill="#A53DFF" />
+                        </svg></span>
+                    <span class="dribble-1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 18 18" fill="none">
+                            <g clip-path="url(#clip0_154_140)">
+                                <path
+                                    d="M0 9C0 7.36799 0.402012 5.86201 1.206 4.482C2.01001 3.10199 3.10201 2.01001 4.482 1.206C5.86201 0.401994 7.36801 0 9 0C10.632 0 12.138 0.401994 13.518 1.206C14.898 2.01001 15.99 3.10199 16.794 4.482C17.598 5.86201 18 7.36799 18 9C18 10.632 17.598 12.138 16.794 13.518C15.99 14.898 14.898 15.99 13.518 16.794C12.138 17.598 10.632 18 9 18C7.36801 18 5.86201 17.598 4.482 16.794C3.10201 15.99 2.01001 14.898 1.206 13.518C0.402012 12.138 0 10.632 0 9ZM1.494 9C1.494 10.872 2.124 12.522 3.384 13.95C3.96 12.822 4.87201 11.748 6.12 10.728C7.36801 9.70799 8.586 9.06601 9.774 8.802C9.594 8.38201 9.42001 8.00401 9.252 7.668C7.18801 8.32801 4.95601 8.658 2.556 8.658C2.088 8.658 1.74001 8.65201 1.512 8.64C1.512 8.68801 1.50901 8.748 1.503 8.82C1.49701 8.892 1.494 8.95199 1.494 9ZM1.728 7.146C1.99201 7.16999 2.38201 7.182 2.898 7.182C4.90201 7.182 6.804 6.912 8.604 6.372C7.69201 4.752 6.69001 3.402 5.598 2.322C4.65001 2.80201 3.83701 3.46801 3.159 4.32C2.48101 5.17199 2.00401 6.11401 1.728 7.146ZM4.41 14.922C5.76601 15.978 7.29601 16.506 9 16.506C9.88801 16.506 10.77 16.338 11.646 16.002C11.406 13.95 10.938 11.964 10.242 10.044C9.13801 10.284 8.02501 10.89 6.903 11.862C5.78101 12.834 4.95 13.854 4.41 14.922ZM7.164 1.746C8.22001 2.83801 9.198 4.19999 10.098 5.832C11.73 5.148 12.96 4.27801 13.788 3.222C12.396 2.07 10.8 1.494 9 1.494C8.388 1.494 7.776 1.57801 7.164 1.746ZM10.746 7.11C10.926 7.49399 11.13 7.97999 11.358 8.568C12.246 8.48399 13.212 8.442 14.256 8.442C15 8.442 15.738 8.46 16.47 8.496C16.374 6.86399 15.786 5.41201 14.706 4.14C13.926 5.30401 12.606 6.29401 10.746 7.11ZM11.808 9.828C12.42 11.604 12.834 13.428 13.05 15.3C13.998 14.688 14.772 13.902 15.372 12.942C15.972 11.982 16.332 10.944 16.452 9.828C15.576 9.76801 14.778 9.738 14.058 9.738C13.398 9.738 12.648 9.76801 11.808 9.828Z"
+                                    fill="#A53DFF" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_154_140">
+                                    <rect width="18" height="18" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg></span>
+                    <span class="ig-1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 18 18" fill="none">
+                            <g clip-path="url(#clip0_154_143)">
+                                <path
+                                    d="M6.00048 9C6.00048 7.34321 7.34322 5.99976 9 5.99976C10.6568 5.99976 12.0002 7.34321 12.0002 9C12.0002 10.6568 10.6568 12.0002 9 12.0002C7.34322 12.0002 6.00048 10.6568 6.00048 9ZM4.37859 9C4.37859 11.5524 6.44758 13.6214 9 13.6214C11.5524 13.6214 13.6214 11.5524 13.6214 9C13.6214 6.44758 11.5524 4.37859 9 4.37859C6.44758 4.37859 4.37859 6.44758 4.37859 9ZM12.7243 4.1954C12.7243 4.79152 13.2078 5.27569 13.8046 5.27569C14.4007 5.27569 14.8849 4.79152 14.8849 4.1954C14.8849 3.59927 14.4015 3.11583 13.8046 3.11583C13.2078 3.11583 12.7243 3.59927 12.7243 4.1954ZM5.36365 16.3258C4.48619 16.2858 4.00929 16.1397 3.69233 16.0161C3.27213 15.8525 2.97262 15.6577 2.65711 15.3429C2.34233 15.0281 2.14677 14.7286 1.98393 14.3084C1.86034 13.9914 1.71422 13.5145 1.67423 12.6371C1.63061 11.6884 1.62189 11.4034 1.62189 9C1.62189 6.59661 1.63134 6.31236 1.67423 5.36292C1.71422 4.48546 1.86107 4.00929 1.98393 3.6916C2.1475 3.27141 2.34233 2.97189 2.65711 2.65638C2.97189 2.3416 3.27141 2.14604 3.69233 1.9832C4.00929 1.85961 4.48619 1.71349 5.36365 1.67351C6.31236 1.62989 6.59733 1.62116 9 1.62116C11.4034 1.62116 11.6876 1.63061 12.6371 1.67351C13.5145 1.71349 13.9907 1.86034 14.3084 1.9832C14.7286 2.14604 15.0281 2.3416 15.3436 2.65638C15.6584 2.97116 15.8532 3.27141 16.0168 3.6916C16.1404 4.00856 16.2865 4.48546 16.3265 5.36292C16.3701 6.31236 16.3788 6.59661 16.3788 9C16.3788 11.4027 16.3701 11.6876 16.3265 12.6371C16.2865 13.5145 16.1397 13.9914 16.0168 14.3084C15.8532 14.7286 15.6584 15.0281 15.3436 15.3429C15.0288 15.6577 14.7286 15.8525 14.3084 16.0161C13.9914 16.1397 13.5145 16.2858 12.6371 16.3258C11.6884 16.3694 11.4034 16.3781 9 16.3781C6.59733 16.3781 6.31236 16.3694 5.36365 16.3258ZM5.2895 0.0545234C4.33134 0.0981422 3.67706 0.250081 3.10493 0.472536C2.51317 0.702262 2.01155 1.0105 1.51066 1.51066C1.0105 2.01082 0.702262 2.51244 0.472536 3.10493C0.250081 3.67706 0.0981422 4.33134 0.0545234 5.2895C0.0101777 6.24911 0 6.5559 0 9C0 11.4441 0.0101777 11.7509 0.0545234 12.7105C0.0981422 13.6687 0.250081 14.3229 0.472536 14.8951C0.702262 15.4868 1.00977 15.9892 1.51066 16.4893C2.01082 16.9895 2.51244 17.297 3.10493 17.5275C3.67779 17.7499 4.33134 17.9019 5.2895 17.9455C6.24984 17.9891 6.5559 18 9 18C11.4448 18 11.7509 17.9898 12.7105 17.9455C13.6687 17.9019 14.3229 17.7499 14.8951 17.5275C15.4868 17.297 15.9885 16.9895 16.4893 16.4893C16.9895 15.9892 17.297 15.4868 17.5275 14.8951C17.7499 14.3229 17.9026 13.6687 17.9455 12.7105C17.9891 11.7502 17.9993 11.4441 17.9993 9C17.9993 6.5559 17.9891 6.24911 17.9455 5.2895C17.9019 4.33134 17.7499 3.67706 17.5275 3.10493C17.297 2.51317 16.9895 2.01155 16.4893 1.51066C15.9892 1.0105 15.4868 0.702262 14.8958 0.472536C14.3229 0.250081 13.6687 0.0974152 12.7112 0.0545234C11.7516 0.0109047 11.4448 0 9.00073 0C6.5559 0 6.24984 0.0101777 5.2895 0.0545234Z"
+                                    fill="#A53DFF" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_154_143">
+                                    <rect width="18" height="18" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg></span>
+                    <span class="linked-1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 18 18" fill="none">
+                            <g clip-path="url(#clip0_154_146)">
+                                <path
+                                    d="M0 2.09066C0 1.48459 0.202708 0.984591 0.608108 0.590664C1.01351 0.196719 1.54055 -0.000244141 2.18919 -0.000244141C2.82626 -0.000244141 3.34169 0.193683 3.73552 0.581573C4.14092 0.981572 4.34363 1.50277 4.34363 2.14521C4.34363 2.72702 4.14672 3.21186 3.7529 3.59975C3.3475 3.99975 2.81467 4.19975 2.15444 4.19975H2.13707C1.49999 4.19975 0.984562 3.99975 0.590734 3.59975C0.196905 3.19975 0 2.69671 0 2.09066ZM0.225869 17.9997V5.85429H4.08301V17.9997H0.225869ZM6.22008 17.9997H10.0772V11.2179C10.0772 10.7937 10.1236 10.4664 10.2162 10.2361C10.3784 9.82398 10.6245 9.47549 10.9546 9.19065C11.2847 8.9058 11.6988 8.76338 12.1969 8.76338C13.4942 8.76338 14.1429 9.67852 14.1429 11.5088V17.9997H18V11.0361C18 9.24216 17.5946 7.88156 16.7838 6.95429C15.973 6.02702 14.9016 5.56338 13.5695 5.56338C12.0753 5.56338 10.9112 6.23611 10.0772 7.58156V7.61793H10.0598L10.0772 7.58156V5.85429H6.22008C6.24324 6.24216 6.25483 7.44822 6.25483 9.47247C6.25483 11.4967 6.24324 14.3391 6.22008 17.9997Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_154_146">
+                                    <rect width="18" height="18" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg></span>
+                    <span class="last-soc"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none">
+                            <mask id="mask0_22_233" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="24" height="24">
+                                <path d="M24 0H0V24H24V0Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_22_233)">
+                                <path
+                                    d="M24 4.55705C23.117 4.94905 22.168 5.21305 21.172 5.33205C22.189 4.72305 22.97 3.75805 23.337 2.60805C22.386 3.17205 21.332 3.58205 20.21 3.80305C19.313 2.84605 18.032 2.24805 16.616 2.24805C13.437 2.24805 11.101 5.21405 11.819 8.29305C7.728 8.08805 4.1 6.12805 1.671 3.14905C0.381 5.36205 1.002 8.25705 3.194 9.72305C2.388 9.69705 1.628 9.47605 0.965 9.10705C0.911 11.388 2.546 13.522 4.914 13.997C4.221 14.185 3.462 14.229 2.69 14.081C3.316 16.037 5.134 17.46 7.29 17.5C5.22 19.123 2.612 19.848 0 19.54C2.179 20.937 4.768 21.752 7.548 21.752C16.69 21.752 21.855 14.031 21.543 7.10605C22.505 6.41105 23.34 5.54405 24 4.55705Z"
+                                    fill="#A53DFF" />
+                            </g>
+                        </svg></span>
+                </span>
+            </span>
+
+            <span class="intro-3">
+                <p>I am Professional User Experience Designer</p><br>
+                <span class="sub-box-1">
+                    <p>“I’m a developer with experience in building websites for small and medium sized
+                        businesses.<br>
+                        I'm looking for providing good services.</p>
+                </span><br>
+                <span class="sub-btn-2">
+                    <button class="btn-3">My Project</button>
+                    <button class="btn-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M21 14C20.7348 14 20.4804 14.1054 20.2929 14.2929C20.1054 14.4804 20 14.7348 20 15V19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H5C4.73478 20 4.48043 19.8946 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V15C4 14.7348 3.89464 14.4804 3.70711 14.2929C3.51957 14.1054 3.26522 14 3 14C2.73478 14 2.48043 14.1054 2.29289 14.2929C2.10536 14.4804 2 14.7348 2 15V19C2 19.7956 2.31607 20.5587 2.87868 21.1213C3.44129 21.6839 4.20435 22 5 22H19C19.7956 22 20.5587 21.6839 21.1213 21.1213C21.6839 20.5587 22 19.7956 22 19V15C22 14.7348 21.8946 14.4804 21.7071 14.2929C21.5196 14.1054 21.2652 14 21 14ZM11.29 15.71C11.3851 15.801 11.4972 15.8724 11.62 15.92C11.7397 15.9729 11.8691 16.0002 12 16.0002C12.1309 16.0002 12.2603 15.9729 12.38 15.92C12.5028 15.8724 12.6149 15.801 12.71 15.71L16.71 11.71C16.8983 11.5217 17.0041 11.2663 17.0041 11C17.0041 10.7337 16.8983 10.4783 16.71 10.29C16.5217 10.1017 16.2663 9.99591 16 9.99591C15.7337 9.99591 15.4783 10.1017 15.29 10.29L13 12.59V3C13 2.73478 12.8946 2.48043 12.7071 2.29289C12.5196 2.10536 12.2652 2 12 2C11.7348 2 11.4804 2.10536 11.2929 2.29289C11.1054 2.48043 11 2.73478 11 3V12.59L8.71 10.29C8.61676 10.1968 8.50607 10.1228 8.38425 10.0723C8.26243 10.0219 8.13186 9.99591 8 9.99591C7.86814 9.99591 7.73757 10.0219 7.61575 10.0723C7.49393 10.1228 7.38324 10.1968 7.29 10.29C7.19676 10.3832 7.1228 10.4939 7.07234 10.6158C7.02188 10.7376 6.99591 10.8681 6.99591 11C6.99591 11.1319 7.02188 11.2624 7.07234 11.3842C7.1228 11.5061 7.19676 11.6168 7.29 11.71L11.29 15.71Z"
+                                fill="#A53DFF" />
+                        </svg> &nbsp; Download CV</button>
+                </span>
+            </span>
+            <!-- </div> -->
+        </div>
+        <div class="box-3" id="lang">
+            <span class="sub-box-5">
+                <h1 class="lang-1">The language we use:</h1><br>
+                <p class="desc-lang">As a software developer, I am fluent in the languages that power the digital realm.
+                    Whether crafting robust backend solutions with Python and Java, building dynamic frontend interfaces
+                    using React and Angular, or optimizing databases with SQL, I navigate the coding landscape to create
+                    seamless and efficient software experiences.</p>
+            </span>
+            <div class="over-2">
+                <div class="over-1">
+                    <div class="cont-1">
+                        <span class="icon-1">
+                            <i class="fa-brands fa-html5" id="icon-one"></i>
+                        </span>
+                        <h1 class="des-1">HTML</h1>
+                        <p class="des-2">HTML, or HyperText Markup Language, is the backbone of the web and a
+                            fundamental language in a
+                            software developer's toolkit.</p>
+                    </div>
+                    <div class="cont-2">
+                        <span class="icon-2">
+                            <i class="fa-brands fa-css3-alt" id="icon-two"></i>
+                        </span>
+                        <h1 class="des-1">CSS 3</h1>
+                        <p class="des-2">CSS3, or Cascading Style Sheets Level 3, empowers software developers to bring
+                            creativity and
+                            style to web development.</p>
+                    </div>
+                </div>
+                <div class="over-1">
+                    <div class="cont-3">
+                        <span class="icon-3">
+                            <i class="fa-brands fa-js" id="icon-three"></i>
+                        </span>
+                        <h1 class="des-1">Java Script(JS)</h1>
+                        <p class="des-2">JavaScript, the dynamic scripting language, is a cornerstone for software
+                            developers, enabling interactive and responsive web applications</p>
+                    </div>
+                    <div class="cont-4">
+                        <span class="icon-4">
+                            <i class="fa-brands fa-node-js" id="icon-three"></i>
+                        </span>
+                        <h1 class="des-1">Node Js</h1>
+                        <p class="des-2">Node.js, a server-side JavaScript runtime, has become a pivotal tool for
+                            software developers in building scalable and high-performance applications</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="box-4" >
+            <span class="port-1">
+                <h1 class="sub-port-1">Portfolio</h1>
+            </span>
+            <span class="sub-port-2">These are some of the projects I worked on it look like there is different as you
+                will see it below:</span>
+            <div class="cont-over-1">
+                <div class="sub-port-3">
+                    <span class="cont-port-1">
+                        <img src="./Pictures/image_processing20200616-29208-1lm1ktf.jpg" alt="cont-1"
+                            class="cont-pic-1">
+                        <p class="cont-p-1">UI-UX DESIGN</p>
+                        <h1 class="cont-title-1">Personal Portfolio</h1>
+                        <p class="cont-desc-1">This is the project I worked on, I used (React js, on Frontend) and the
+                            backend I used the Node js and about the database I used the MongoDB.</p>
+                        <button class="cont-btn-1">Case Study &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+                    </span>
+                    <span class="cont-port-2">
+                        <img src="./Pictures/dashboard-design-concept.png" alt="cont-2" class="cont-pic-2">
+                        <p class="cont-p-2">UI-UX DESIGN</p>
+                        <h1 class="cont-title-2">App Dashboard</h1>
+                        <p class="cont-desc-2">This is the dashboard template I created where the owner of project have
+                            the grant of adding the different contents.</p>
+                        <button class="cont-btn-1">Case Study &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+                    </span>
+                    <span class="cont-port-3">
+                        <img src="./Pictures/a436fbcc3db7e198bbeeb25dfbe5fb79.png" alt="cont-3" class="cont-pic-3">
+                        <p class="cont-p-3">UI-UX DESIGN</p>
+                        <h1 class="cont-title-3">Sell & Buy</h1>
+                        <p class="cont-desc-3">This is the latest project I worked on, is the project of any compony
+                            which selling and allowing their client also to sell their products.</p>
+                        <button class="cont-btn-1">Case Study &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+                    </span>
+                </div>
+                <div class="sub-port-3">
+                    <span class="cont-port-1">
+                        <img src="./Pictures/Free-E-commerce-Product-UI-Design-in-Photoshop-1180x664.jpg" alt="cont-1"
+                            class="cont-pic-1">
+                        <p class="cont-p-1">UI-UX DESIGN</p>
+                        <h1 class="cont-title-1">Music UI Project</h1>
+                        <p class="cont-desc-1">This is the project of music I worked on which sells the songs online to
+                            their client and lover of the music in general.</p>
+                        <button class="cont-btn-1">Case Study &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+                    </span>
+                    <span class="cont-port-2">
+                        <img src="./Pictures/Image-1-1.png" alt="cont-2" class="cont-pic-2">
+                        <p class="cont-p-2">UI-UX DESIGN</p>
+                        <h1 class="cont-title-2">e-commerce project UI</h1>
+                        <p class="cont-desc-2">This is the e-commerce project I worked on as fronted developer, this
+                            project is responsible for sell online different products.</p>
+                        <button class="cont-btn-1">Case Study &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+                    </span>
+                    <span class="cont-port-3">
+                        <img src="./Pictures/design-with-rounded-corners.jpg" alt="cont-3" class="cont-pic-3">
+                        <p class="cont-p-3">UI-UX DESIGN</p>
+                        <h1 class="cont-title-3">Phone app UI</h1>
+                        <p class="cont-desc-3">As you see this is the phone app UI I worked on as fronted developer, is
+                            the project that was focused on designing phone music player </p>
+                        <button class="cont-btn-1">Case Study &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="cont-bottom">
+                <button class="bottom-btn">More Project</button>
+            </div>
+        </div> -->
+
+        <div class="other-box" id="port-2">
+            <div class="down-1">
+                <h1 id="off-1">Portfolio</h1>
+            </div>
+            <div id="off-p">
+                <p>These are some of the projects I worked on it look like there is different as you will see it below:
+                </p>
+            </div>
+
+            <div class="our-cont">
+                <div id="first-1">
+                    <div id="my-1">
+                        <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                        <div id="word-1">
+                            <p id="u-1">UI-UX DESIGN</p>
+                        </div>
+                        <div id="the-1">
+                            <h1>Personal Portfolio</h1>
+                        </div>
+                        <div id="p-2">
+                            <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                                the Node js and about the database I used the MongoDB.</p>
+                        </div>
+                        <div id="our-btn">
+                            <button id="press-1">Case Study</button>
+                        </div>
+                    </div>
+
+                    <div id="my-1">
+                        <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                        <div id="word-1">
+                            <p id="u-1">UI-UX DESIGN</p>
+                        </div>
+                        <div id="the-1">
+                            <h1>Personal Portfolio</h1>
+                        </div>
+                        <div id="p-2">
+                            <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                                the Node js and about the database I used the MongoDB.</p>
+                        </div>
+                        <div id="our-btn">
+                            <button id="press-1">Case Study</button>
+                        </div>
+                    </div>
+
+                    <div id="my-1">
+                        <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                        <div id="word-1">
+                            <p id="u-1">UI-UX DESIGN</p>
+                        </div>
+                        <div id="the-1">
+                            <h1>Personal Portfolio</h1>
+                        </div>
+                        <div id="p-2">
+                            <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                                the Node js and about the database I used the MongoDB.</p>
+                        </div>
+                        <div id="our-btn">
+                            <button id="press-1">Case Study</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="last-1">
+                    <div id="my-1">
+                        <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                        <div id="word-1">
+                            <p id="u-1">UI-UX DESIGN</p>
+                        </div>
+                        <div id="the-1">
+                            <h1>Personal Portfolio</h1>
+                        </div>
+                        <div id="p-2">
+                            <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                                the Node js and about the database I used the MongoDB.</p>
+                        </div>
+                        <div id="our-btn">
+                            <button id="press-1">Case Study</button>
+                        </div>
+                    </div>
+                    <div id="my-1">
+                        <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                        <div id="word-1">
+                            <p id="u-1">UI-UX DESIGN</p>
+                        </div>
+                        <div id="the-1">
+                            <h1>Personal Portfolio</h1>
+                        </div>
+                        <div id="p-2">
+                            <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                                the Node js and about the database I used the MongoDB.</p>
+                        </div>
+                        <div id="our-btn">
+                            <button id="press-1">Case Study</button>
+                        </div>
+                    </div>
+                    <div id="my-1">
+                        <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                        <div id="word-1">
+                            <p id="u-1">UI-UX DESIGN</p>
+                        </div>
+                        <div id="the-1">
+                            <h1>Personal Portfolio</h1>
+                        </div>
+                        <div id="p-2">
+                            <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                                the Node js and about the database I used the MongoDB.</p>
+                        </div>
+                        <div id="our-btn">
+                            <button id="press-1">Case Study</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="box-5" id="blog-2">
+            <h1 class="box-5-title">Do you have Project Idia? Let's discuss your project!</h1>
+            <p class="box-5-p">If you have the project idea we can help you to analyze and implement it. </p>
+            <button class="box-5-btn">Let’s work Together &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="box-6">
+            <div class="cont-box6">
+                <span class="box6-top">
+                    <h1 class="box6-title">Blog</h1>
+                    <p class="box6-p">"Welcome to my tech corner! Dive into insightful articles on software
+                        development<br>
+                        , where I share practical tips, coding challenges, and the latest trends.<br>
+                        Let's explore the fascinating world of coding together!"</p>
+                </span>
+
+                <!-- <div class="boxOver">
+                    
+                    <span class="myCard">
+                        <img src="./Pictures/altumcode-oZ61KFUQsus-unsplash.jpg" alt="img-box6" class="img-box6">
+                        <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                            <i class="fa-regular fa-thumbs-up"> 4k</i> &nbsp;
+                            <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+
+                        </p>
+                        <p class="cont-desc-p">HTML, or HyperText Markup Language, is the backbone of the web and a
+                            fundamental
+                            language in a software developer's toolkit. </p>
+                        <a href="./Single-Blog/Blog.html" class="a-box6">visit Site &nbsp; <i
+                                class="fa-solid fa-arrow-right"></i></a>
+
+                    </span>
+
+                    <span class="myCard">
+                        <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="img-box6" class="img-box6">
+                        <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                            <i class="fa-regular fa-thumbs-up"> 100k</i> &nbsp;
+                            <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+                        </p>
+                        <p class="cont-desc-p">The ability to analyze complex problems and develop effective solutions
+                            is fundamental for a software developer</p>
+                        <a href="./Single-Blog/Blog.html" class="a-box6">visit Site &nbsp; <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </span>
+                    <span class="myCard">
+                        <img src="./Pictures/caspar-camille-rubin-0qvBNep1Y04-unsplash.jpg" alt="img-box6"
+                            class="img-box6">
+                        <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                            <i class="fa-regular fa-thumbs-up"> 300k</i> &nbsp;
+                            <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+                        </p>
+                        <p class="cont-desc-p">For web developers, knowledge of HTML, CSS, and JavaScript is essential.
+                            server-side technologies is also valuable.</p>
+                        <a href="./Single-Blog/Blog.html" class="a-box6">visit Site &nbsp; <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </span>
+                    <span class="myCard">
+                        <img src="./Pictures/claudio-schwarz-fyeOxvYvIyY-unsplash.jpg" alt="img-box6" class="img-box6">
+                        <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                            <i class="fa-regular fa-thumbs-up"> 200k</i> &nbsp;
+                            <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+                        </p>
+                        <p class="cont-desc-p">Understanding algorithms and data structures is crucial for writing
+                            efficient and scalable code.</p>
+                        <a href="./Single-Blog/Blog.html" class="a-box6">visit Site &nbsp; <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </span>
+
+                    <span class="myCard">
+                        <img src="./Pictures/claudio-schwarz-fyeOxvYvIyY-unsplash.jpg" alt="img-box6" class="img-box6">
+                        <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                            <i class="fa-regular fa-thumbs-up"> 200k</i> &nbsp;
+                            <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+                        </p>
+                        <p class="cont-desc-p">Understanding algorithms and data structures is crucial for writing
+                            efficient and scalable code.</p>
+                        <a href="./Single-Blog/Blog.html" class="a-box6">visit Site &nbsp; <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </span>
+
+                    <span class="myCard">
+                        <img src="./Pictures/claudio-schwarz-fyeOxvYvIyY-unsplash.jpg" alt="img-box6" class="img-box6">
+                        <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                            <i class="fa-regular fa-thumbs-up"> 200k</i> &nbsp;
+                            <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+                        </p>
+                        <p class="cont-desc-p">Understanding algorithms and data structures is crucial for writing
+                            efficient and scalable code.</p>
+                        <a href="./Single-Blog/Blog.html" class="a-box6">visit Site &nbsp; <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </span>
+                </div> -->
+
+
+                <!-- <div class="our-cont"> -->
+
+    
+                    <!-- <div id="last-1">
+                        <div id="my-1">
+                            <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                            <div id="word-1">
+                                <p id="u-1">UI-UX DESIGN</p>
+                            </div>
+                            <div id="the-1">
+                                <h1>Personal Portfolio</h1>
+                            </div>
+                            <div id="p-2">
+                                <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                                    the Node js and about the database I used the MongoDB.</p>
+                            </div>
+                            <div id="our-btn">
+                                <button id="press-1">Case Study</button>
+                            </div>
+                        </div>
+                        <div id="my-1">
+                            <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                            <div id="word-1">
+                                <p id="u-1">UI-UX DESIGN</p>
+                            </div>
+                            <div id="the-1">
+                                <h1>Personal Portfolio</h1>
+                            </div>
+                            <div id="p-2">
+                                <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                                    the Node js and about the database I used the MongoDB.</p>
+                            </div>
+                            <div id="our-btn">
+                                <button id="press-1">Case Study</button>
+                            </div>
+                        </div>
+                        <div id="my-1">
+                            <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                            <div id="word-1">
+                                <p id="u-1">UI-UX DESIGN</p>
+                            </div>
+                            <div id="the-1">
+                                <h1>Personal Portfolio</h1>
+                            </div>
+                            <div id="p-2">
+                                <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                                    the Node js and about the database I used the MongoDB.</p>
+                            </div>
+                            <div id="our-btn">
+                                <button id="press-1">Case Study</button>
+                            </div>
+                        </div>
+    
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="myBlog">
+            <div class="myCard">
+                <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                <div id="word-1">
+                    <!-- <p id="u-1">UI-UX DESIGN</p> -->
+                    <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                        <i class="fa-regular fa-thumbs-up"> 4k</i> &nbsp;
+                        <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+
+                    </p>
+                </div>
+                <div id="the-1">
+                    <h1>Blog</h1>
+                </div>
+                <div id="p-2">
+                    <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                        the Node js and about the database I used the MongoDB.</p>
+                </div>
+                <div id="our-btn">
+                    <button id="press-1"><a href="./Single-Blog/Blog.html" target="_blank" id="under">Visit</a></button>
+                </div>
+            </div>
+            <div class="myCard">
+                <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                <div id="word-1">
+                    <!-- <p id="u-1">UI-UX DESIGN</p> -->
+                    <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                        <i class="fa-regular fa-thumbs-up"> 4k</i> &nbsp;
+                        <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+
+                    </p>
+                </div>
+                <div id="the-1">
+                    <h1>Blog</h1>
+                </div>
+                <div id="p-2">
+                    <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                        the Node js and about the database I used the MongoDB.</p>
+                </div>
+                <div id="our-btn">
+                    <button id="press-1"><a href="./Single-Blog/Blog.html" target="_blank" id="under">Visit</a></button>
+                </div>
+            </div>
+            <div class="myCard">
+                <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                <div id="word-1">
+                    <!-- <p id="u-1">UI-UX DESIGN</p> -->
+                    <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                        <i class="fa-regular fa-thumbs-up"> 4k</i> &nbsp;
+                        <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+
+                    </p>
+                </div>
+                <div id="the-1">
+                    <h1>blog</h1>
+                </div>
+                <div id="p-2">
+                    <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                        the Node js and about the database I used the MongoDB.</p>
+                </div>
+                <div id="our-btn">
+                    <button id="press-1"><a href="./Single-Blog/Blog.html" target="_blank" id="under">Visit</a></button>
+                </div>
+            </div>
+            <div class="myCard">
+                <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+                <div id="word-1">
+                    <!-- <p id="u-1">UI-UX DESIGN</p> -->
+                    <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+                        <i class="fa-regular fa-thumbs-up"> 4k</i> &nbsp;
+                        <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+
+                    </p>
+                </div>
+                <div id="the-1">
+                    <h1>Blog</h1>
+                </div>
+                <div id="p-2">
+                    <p>This is the project I worked on, I used (React js, on Frontend) and the backend I used
+                        the Node js and about the database I used the MongoDB.</p>
+                </div>
+                <div id="our-btn">
+                    <button id="press-1"><a href="./Single-Blog/Blog.html" target="_blank" id="under">Visit</a></button>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="box-7">
+            <span class="box7-what">
+                <h1 class="box7-title">What I do?</h1>
+                <p class="box7-p">As a software developer, I craft digital solutions that bring ideas to life. From
+                    designing elegant user interfaces to architecting scalable backend systems, my role is to translate
+                    concepts into functional and efficient code. I thrive on problem-solving, continuously learning new
+                    technologies, and delivering software that makes a meaningful impact.</p>
+                <button class="box7-btn">Say Hello!</button>
+            </span>
+            <span class="box7-over">
+                <span class="box7-cont1">
+                    <!-- <span class="cont1-inside"></span> -->
+                    <h1 class="box7-user-1">User Experience (UX)</h1>
+                    <p class="box7-cont-p-1">As a software developer, I prioritize User Experience (UX) at the core of
+                        my creations. I specialize in designing intuitive interfaces and seamless interactions to ensure
+                        users have a delightful and efficient journey through the software. By combining code and
+                        user-centric design principles, I strive to elevate the overall usability and satisfaction of
+                        digital products.</p>
+                </span>
+                <span class="box7-cont2">
+                    <!-- <span class="cont1-inside"></span> -->
+                    <h1 class="box7-user-2">User Interface (UI)</h1>
+                    <p class="box7-cont-p-2">As a software developer, I specialize in User Interface (UI) design,
+                        shaping the visual elements that users interact with. I craft aesthetically pleasing and
+                        intuitive interfaces, focusing on creating a seamless and engaging user experience. Through
+                        meticulous attention to detail and a passion for design, I strive to enhance the overall look
+                        and feel of digital applications</p>
+                </span>
+                <span class="box7-cont3">
+                    <!-- <span class="cont1-inside"></span> -->
+                    <h1 class="box7-user-3">Web Development</h1>
+                    <p class="box7-cont-p-3">As a software developer, I specialize in web development, bringing digital
+                        experiences to life on the internet. Leveraging my expertise in HTML, CSS, and JavaScript, I
+                        create dynamic and responsive websites that meet both functional and aesthetic requirements.
+                        From crafting interactive user interfaces to optimizing backend performance, my focus is on
+                        delivering robust and user-friendly web solutions.</p>
+                </span>
+            </span>
+        </div>
+        <div class="box-8" id="contact-2">
+            <span class="sub-box8">
+
+                <span class="new-sub-box8">
+                    <div class="box8-over">
+                        <h1 class="box8-title">Let’s discuss your Project</h1>
+                        <p class="box8-p">You can reach me on the platform:</p>
+                        <span class="sub-cont-box8">
+                            <span class="inside-cont"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M18 4.47991C16.4087 2.88861 14.2504 1.99463 12 1.99463C9.74956 1.99463 7.5913 2.88861 6 4.47991C4.4087 6.07121 3.51472 8.22947 3.51472 10.4799C3.51472 12.7303 4.4087 14.8886 6 16.4799L11.27 21.7599C11.363 21.8536 11.4736 21.928 11.5954 21.9788C11.7173 22.0296 11.848 22.0557 11.98 22.0557C12.112 22.0557 12.2427 22.0296 12.3646 21.9788C12.4864 21.928 12.597 21.8536 12.69 21.7599L18 16.4299C19.5846 14.8452 20.4749 12.696 20.4749 10.4549C20.4749 8.21386 19.5846 6.06459 18 4.47991ZM16.57 14.9999L12 19.5899L7.43 14.9999C6.52714 14.0962 5.91247 12.9452 5.66369 11.6922C5.41491 10.4392 5.54319 9.14066 6.0323 7.96059C6.52142 6.78052 7.34942 5.77196 8.41163 5.06239C9.47384 4.35281 10.7226 3.97409 12 3.97409C13.2774 3.97409 14.5262 4.35281 15.5884 5.06239C16.6506 5.77196 17.4786 6.78052 17.9677 7.96059C18.4568 9.14066 18.5851 10.4392 18.3363 11.6922C18.0875 12.9452 17.4729 14.0962 16.57 14.9999ZM9 7.40991C8.19271 8.21968 7.73939 9.31648 7.73939 10.4599C7.73939 11.6033 8.19271 12.7001 9 13.5099C9.59976 14.1107 10.3636 14.521 11.1956 14.6893C12.0277 14.8576 12.891 14.7765 13.6771 14.4561C14.4632 14.1356 15.1372 13.5902 15.6145 12.8882C16.0918 12.1861 16.3511 11.3588 16.36 10.5099C16.3645 9.94311 16.2553 9.38117 16.0389 8.8573C15.8225 8.33343 15.5032 7.85827 15.1 7.45991C14.7037 7.05449 14.2311 6.73145 13.7094 6.50938C13.1878 6.2873 12.6273 6.17059 12.0604 6.16594C11.4935 6.16129 10.9312 6.26881 10.406 6.4823C9.88074 6.69579 9.40292 7.01104 9 7.40991ZM13.69 12.0899C13.311 12.4747 12.8102 12.7158 12.2731 12.7722C11.736 12.8285 11.1961 12.6966 10.7455 12.3988C10.2949 12.1011 9.9618 11.6562 9.80301 11.14C9.64421 10.6238 9.66965 10.0685 9.87496 9.56907C10.0803 9.06958 10.4527 8.65693 10.9286 8.40165C11.4045 8.14637 11.9543 8.06432 12.4839 8.16953C13.0136 8.27474 13.4903 8.56067 13.8325 8.97844C14.1747 9.39621 14.3612 9.91988 14.36 10.4599C14.3454 11.0772 14.0865 11.6634 13.64 12.0899H13.69Z"
+                                        fill="white" />
+                                </svg></span>
+                            <span class="text-over">
+                                <span class="sub-text-1">Address:</span>
+                                <span class="sub-text-2">Kigali-Rwanda</span>
+                            </span>
+                        </span>
+                        <span class="inside-cont-2">
+                            <span class="sub2-cont-box8"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32" fill="none">
+                                    <path
+                                        d="M30.4 23.1999V8.7999C30.4 7.4719 29.328 6.3999 28 6.3999H5.584C4.256 6.3999 3.184 7.4719 3.184 8.7999V23.1999C3.184 24.5279 4.256 25.5999 5.584 25.5999H28C29.328 25.5999 30.4 24.5279 30.4 23.1999ZM28.304 8.6239C28.832 9.1519 28.544 9.6959 28.256 9.9679L21.76 15.9199L28 22.4159C28.192 22.6399 28.32 22.9919 28.096 23.2319C27.888 23.4879 27.408 23.4719 27.2 23.3119L20.208 17.3439L16.784 20.4639L13.376 17.3439L6.384 23.3119C6.176 23.4719 5.696 23.4879 5.488 23.2319C5.264 22.9919 5.392 22.6399 5.584 22.4159L11.824 15.9199L5.328 9.9679C5.04 9.6959 4.752 9.1519 5.28 8.6239C5.808 8.0959 6.352 8.3519 6.8 8.7359L16.784 16.7999L26.784 8.7359C27.232 8.3519 27.776 8.0959 28.304 8.6239Z"
+                                        fill="#A53DFF" />
+                                </svg></span>
+                            <span class="text-over">
+                                <span class="sub-text-3">My Email:</span>
+                                <span class="sub-text-4">munezeromicha2000@gmail.com</span>
+                            </span>
+                        </span>
+                        <span class="inside-cont-2">
+                            <span class="sub2-cont-box8"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="38"
+                                    viewBox="0 0 28 38" fill="none">
+                                    <path
+                                        d="M25.3619 25.9886C25.1669 28 24.439 29.8462 23.3143 31.1826C22.1895 32.5189 20.7448 33.2538 19.25 33.2502C10.5656 33.2502 3.5 23.6611 3.5 11.8752C3.49732 9.84648 4.03888 7.88581 5.02352 6.35939C6.00816 4.83297 7.36856 3.84517 8.85062 3.5805C9.2254 3.5184 9.60493 3.62245 9.93255 3.87714C10.2602 4.13182 10.5183 4.52347 10.6684 4.99363L12.9784 11.9925V12.0103C13.0934 12.3702 13.1408 12.7631 13.1166 13.1539C13.0924 13.5448 12.9972 13.9214 12.8395 14.2502C12.8198 14.2903 12.7991 14.3274 12.7772 14.3645L10.5 18.0279C11.3192 20.2871 13.0605 22.6295 14.747 23.7443L17.4092 20.6701C17.4354 20.6403 17.4627 20.6125 17.4912 20.587C17.7333 20.3679 18.0118 20.2342 18.3015 20.1979C18.5912 20.1616 18.883 20.2239 19.1505 20.3792L19.1647 20.3881L24.3173 23.5216C24.6644 23.7246 24.9537 24.0746 25.142 24.5193C25.3302 24.964 25.4074 25.4795 25.3619 25.9886Z"
+                                        fill="#A53DFF" />
+                                </svg></span>
+                            <span class="text-over">
+                                <span class="sub-text-3">Call Me Now:</span>
+                                <span class="sub-text-4">+250790962901</span>
+                            </span>
+                        </span>
+                        <div class="social-pos">
+                            <span class="social-box8">
+                                <span class="fb-1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="20"
+                                        viewBox="0 0 18 20" fill="none">
+                                        <path
+                                            d="M13.4866 0.25H10.43C8.61604 0.25 6.59845 1.02784 6.59845 3.70863C6.60731 4.64273 6.59845 5.53731 6.59845 6.54411H4.5V9.94872H6.66339V19.75H10.6387V9.88404H13.2626L13.5 6.53456H10.5702C10.5702 6.53456 10.5768 5.04457 10.5702 4.61187C10.5702 3.55248 11.6514 3.61314 11.7164 3.61314C12.2309 3.61314 13.2313 3.61467 13.4881 3.61314V0.25H13.4866Z"
+                                            fill="white" />
+                                    </svg></span>
+                            </span>
+                            <span class="drib-1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                    viewBox="0 0 18 18" fill="none">
+
+                                    <path
+                                        d="M0 9C0 7.36799 0.402012 5.86201 1.206 4.482C2.01001 3.10199 3.10201 2.01001 4.482 1.206C5.86201 0.401994 7.36801 0 9 0C10.632 0 12.138 0.401994 13.518 1.206C14.898 2.01001 15.99 3.10199 16.794 4.482C17.598 5.86201 18 7.36799 18 9C18 10.632 17.598 12.138 16.794 13.518C15.99 14.898 14.898 15.99 13.518 16.794C12.138 17.598 10.632 18 9 18C7.36801 18 5.86201 17.598 4.482 16.794C3.10201 15.99 2.01001 14.898 1.206 13.518C0.402012 12.138 0 10.632 0 9ZM1.494 9C1.494 10.872 2.124 12.522 3.384 13.95C3.96 12.822 4.87201 11.748 6.12 10.728C7.36801 9.70799 8.586 9.06601 9.774 8.802C9.594 8.38201 9.42001 8.00401 9.252 7.668C7.18801 8.32801 4.95601 8.658 2.556 8.658C2.088 8.658 1.74001 8.65201 1.512 8.64C1.512 8.68801 1.50901 8.748 1.503 8.82C1.49701 8.892 1.494 8.95199 1.494 9ZM1.728 7.146C1.99201 7.16999 2.38201 7.182 2.898 7.182C4.90201 7.182 6.804 6.912 8.604 6.372C7.69201 4.752 6.69001 3.402 5.598 2.322C4.65001 2.80201 3.83701 3.46801 3.159 4.32C2.48101 5.17199 2.00401 6.11401 1.728 7.146ZM4.41 14.922C5.76601 15.978 7.29601 16.506 9 16.506C9.88801 16.506 10.77 16.338 11.646 16.002C11.406 13.95 10.938 11.964 10.242 10.044C9.13801 10.284 8.02501 10.89 6.903 11.862C5.78101 12.834 4.95 13.854 4.41 14.922ZM7.164 1.746C8.22001 2.83801 9.198 4.19999 10.098 5.832C11.73 5.148 12.96 4.27801 13.788 3.222C12.396 2.07 10.8 1.494 9 1.494C8.388 1.494 7.776 1.57801 7.164 1.746ZM10.746 7.11C10.926 7.49399 11.13 7.97999 11.358 8.568C12.246 8.48399 13.212 8.442 14.256 8.442C15 8.442 15.738 8.46 16.47 8.496C16.374 6.86399 15.786 5.41201 14.706 4.14C13.926 5.30401 12.606 6.29401 10.746 7.11ZM11.808 9.828C12.42 11.604 12.834 13.428 13.05 15.3C13.998 14.688 14.772 13.902 15.372 12.942C15.972 11.982 16.332 10.944 16.452 9.828C15.576 9.76801 14.778 9.738 14.058 9.738C13.398 9.738 12.648 9.76801 11.808 9.828Z"
+                                        fill="#A53DFF" />
+
+                                </svg></span>
+                            <span class="x-1"><svg class="x-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none">
+                                    <mask id="mask0_22_232" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                        y="0" width="24" height="24">
+                                        <path d="M24 0H0V24H24V0Z" fill="white" />
+                                    </mask>
+                                    <g mask="url(#mask0_22_232)">
+                                        <path
+                                            d="M24 4.55705C23.117 4.94905 22.168 5.21305 21.172 5.33205C22.189 4.72305 22.97 3.75805 23.337 2.60805C22.386 3.17205 21.332 3.58205 20.21 3.80305C19.313 2.84605 18.032 2.24805 16.616 2.24805C13.437 2.24805 11.101 5.21405 11.819 8.29305C7.728 8.08805 4.1 6.12805 1.671 3.14905C0.381 5.36205 1.002 8.25705 3.194 9.72305C2.388 9.69705 1.628 9.47605 0.965 9.10705C0.911 11.388 2.546 13.522 4.914 13.997C4.221 14.185 3.462 14.229 2.69 14.081C3.316 16.037 5.134 17.46 7.29 17.5C5.22 19.123 2.612 19.848 0 19.54C2.179 20.937 4.768 21.752 7.548 21.752C16.69 21.752 21.855 14.031 21.543 7.10605C22.505 6.41105 23.34 5.54405 24 4.55705Z"
+                                            fill="#A53DFF" />
+                                    </g>
+                                </svg></span>
+                            <span class="insta-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                    viewBox="0 0 18 18" fill="none">
+                                    <g clip-path="url(#clip0_154_227)">
+                                        <path
+                                            d="M6.00049 9C6.00049 7.34321 7.34322 5.99976 9 5.99976C10.6568 5.99976 12.0002 7.34321 12.0002 9C12.0002 10.6568 10.6568 12.0002 9 12.0002C7.34322 12.0002 6.00049 10.6568 6.00049 9ZM4.37859 9C4.37859 11.5524 6.44758 13.6214 9 13.6214C11.5524 13.6214 13.6214 11.5524 13.6214 9C13.6214 6.44758 11.5524 4.37859 9 4.37859C6.44758 4.37859 4.37859 6.44758 4.37859 9ZM12.7243 4.1954C12.7243 4.79152 13.2078 5.27569 13.8046 5.27569C14.4007 5.27569 14.8849 4.79152 14.8849 4.1954C14.8849 3.59927 14.4015 3.11583 13.8046 3.11583C13.2078 3.11583 12.7243 3.59927 12.7243 4.1954ZM5.36365 16.3258C4.48619 16.2858 4.00929 16.1397 3.69233 16.0161C3.27213 15.8525 2.97262 15.6577 2.65711 15.3429C2.34233 15.0281 2.14677 14.7286 1.98393 14.3084C1.86034 13.9914 1.71422 13.5145 1.67423 12.6371C1.63061 11.6884 1.62189 11.4034 1.62189 9C1.62189 6.59661 1.63134 6.31236 1.67423 5.36292C1.71422 4.48546 1.86107 4.00929 1.98393 3.6916C2.1475 3.27141 2.34233 2.97189 2.65711 2.65638C2.97189 2.3416 3.27141 2.14604 3.69233 1.9832C4.00929 1.85961 4.48619 1.71349 5.36365 1.67351C6.31236 1.62989 6.59733 1.62116 9 1.62116C11.4034 1.62116 11.6876 1.63061 12.6371 1.67351C13.5145 1.71349 13.9907 1.86034 14.3084 1.9832C14.7286 2.14604 15.0281 2.3416 15.3436 2.65638C15.6584 2.97116 15.8532 3.27141 16.0168 3.6916C16.1404 4.00856 16.2865 4.48546 16.3265 5.36292C16.3701 6.31236 16.3788 6.59661 16.3788 9C16.3788 11.4027 16.3701 11.6876 16.3265 12.6371C16.2865 13.5145 16.1397 13.9914 16.0168 14.3084C15.8532 14.7286 15.6584 15.0281 15.3436 15.3429C15.0288 15.6577 14.7286 15.8525 14.3084 16.0161C13.9914 16.1397 13.5145 16.2858 12.6371 16.3258C11.6884 16.3694 11.4034 16.3781 9 16.3781C6.59733 16.3781 6.31236 16.3694 5.36365 16.3258V16.3258ZM5.2895 0.0545234C4.33134 0.0981422 3.67706 0.250081 3.10493 0.472536C2.51317 0.702262 2.01155 1.0105 1.51066 1.51066C1.0105 2.01082 0.702262 2.51244 0.472536 3.10493C0.250081 3.67706 0.0981422 4.33134 0.0545234 5.2895C0.0101777 6.24911 0 6.5559 0 9C0 11.4441 0.0101777 11.7509 0.0545234 12.7105C0.0981422 13.6687 0.250081 14.3229 0.472536 14.8951C0.702262 15.4868 1.00977 15.9892 1.51066 16.4893C2.01082 16.9895 2.51244 17.297 3.10493 17.5275C3.67779 17.7499 4.33134 17.9019 5.2895 17.9455C6.24984 17.9891 6.5559 18 9 18C11.4448 18 11.7509 17.9898 12.7105 17.9455C13.6687 17.9019 14.3229 17.7499 14.8951 17.5275C15.4868 17.297 15.9884 16.9895 16.4893 16.4893C16.9895 15.9892 17.297 15.4868 17.5275 14.8951C17.7499 14.3229 17.9026 13.6687 17.9455 12.7105C17.9891 11.7502 17.9993 11.4441 17.9993 9C17.9993 6.5559 17.9891 6.24911 17.9455 5.2895C17.9019 4.33134 17.7499 3.67706 17.5275 3.10493C17.297 2.51317 16.9895 2.01155 16.4893 1.51066C15.9892 1.0105 15.4868 0.702262 14.8958 0.472536C14.3229 0.250081 13.6687 0.0974152 12.7112 0.0545234C11.7516 0.0109047 11.4448 0 9.00073 0C6.5559 0 6.24984 0.0101777 5.2895 0.0545234"
+                                            fill="#A53DFF" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_154_227">
+                                            <rect width="18" height="18" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></span>
+                            <span class="linkedin-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                    viewBox="0 0 18 18" fill="none">
+                                    <g clip-path="url(#clip0_154_90)">
+                                        <path
+                                            d="M0 2.09091C0 1.48483 0.202708 0.984835 0.608108 0.590908C1.01351 0.196963 1.54055 0 2.18919 0C2.82626 0 3.34169 0.193927 3.73552 0.581817C4.14092 0.981817 4.34363 1.50302 4.34363 2.14545C4.34363 2.72727 4.14672 3.2121 3.7529 3.59999C3.3475 3.99999 2.81467 4.19999 2.15444 4.19999H2.13707C1.49999 4.19999 0.984562 3.99999 0.590734 3.59999C0.196905 3.19999 0 2.69696 0 2.09091ZM0.225869 18V5.85454H4.08301V18H0.225869ZM6.22008 18H10.0772V11.2182C10.0772 10.7939 10.1236 10.4666 10.2162 10.2363C10.3784 9.82422 10.6245 9.47573 10.9546 9.19089C11.2847 8.90604 11.6988 8.76362 12.1969 8.76362C13.4942 8.76362 14.1429 9.67877 14.1429 11.5091V18H18V11.0363C18 9.2424 17.5946 7.88181 16.7838 6.95453C15.973 6.02726 14.9016 5.56363 13.5695 5.56363C12.0753 5.56363 10.9112 6.23635 10.0772 7.58181V7.61817H10.0598L10.0772 7.58181V5.85454H6.22008C6.24324 6.24241 6.25483 7.44846 6.25483 9.47271C6.25483 11.4969 6.24324 14.3394 6.22008 18Z"
+                                            fill="#A53DFF" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_154_90">
+                                            <rect width="18" height="18" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></span>
+                        </div>
+                    </div>
+
+
+                </span>
+
+                <div class="last-form-box9">
+                    <h1 class="contact-box8">Contact me</h1>
+                    <form action="" id="form">
+                        <div class="one">
+                            <label for="" id="name-1">Name*</label>
+                            <input type="text" name="name" id="inputOne">
+                            <div class="error"></div>
+                        </div>
+                        <div class="one">
+                            <label for="" class="lab-1">Email*</label>
+                            <input type="text" name="name" id="in_2">
+                            <div class="error"></div>
+                        </div>
+                        <div class="one">
+                            <label for="" class="lab-1">Location</label>
+                            <input type="text" name="name" id="in_3">
+                            <div class="error"></div>
+                        </div>
+                        <div class="one">
+                            <label for="" class="lab-1">Subject*</label>
+                            <input type="text" name="name" id="in_4">
+                            <div class="error"></div>
+                        </div>
+                        <div class="one">
+                            <label for="" class="lab-1">Message*</label>
+                            <input type="text" name="name" id="in_5">
+                            <div class="error"></div>
+                        </div>
+                        <button class="last-btn" type="submit">Submit 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M20.34 9.32013L6.34 2.32013C5.78749 2.04514 5.16362 1.94724 4.55344 2.03978C3.94326 2.13232 3.37646 2.4108 2.93033 2.83724C2.48421 3.26369 2.18046 3.81735 2.0605 4.42274C1.94054 5.02813 2.0102 5.65578 2.26 6.22013L4.66 11.5901C4.71446 11.72 4.74251 11.8593 4.74251 12.0001C4.74251 12.1409 4.71446 12.2803 4.66 12.4101L2.26 17.7801C2.0567 18.2368 1.97076 18.7371 2.00998 19.2355C2.0492 19.7339 2.21235 20.2145 2.48459 20.6338C2.75682 21.0531 3.12953 21.3977 3.56883 21.6363C4.00812 21.875 4.50009 22 5 22.0001C5.46823 21.9955 5.92949 21.8861 6.35 21.6801L20.35 14.6801C20.8466 14.4303 21.264 14.0474 21.5557 13.5742C21.8474 13.101 22.0018 12.556 22.0018 12.0001C22.0018 11.4442 21.8474 10.8993 21.5557 10.4261C21.264 9.95282 20.8466 9.56994 20.35 9.32013H20.34ZM19.45 12.8901L5.45 19.8901C5.26617 19.9784 5.05973 20.0084 4.85839 19.976C4.65705 19.9436 4.47041 19.8504 4.32352 19.709C4.17662 19.5675 4.07648 19.3845 4.03653 19.1846C3.99658 18.9846 4.01873 18.7772 4.1 18.5901L6.49 13.2201C6.52094 13.1484 6.54766 13.075 6.57 13.0001H13.46C13.7252 13.0001 13.9796 12.8948 14.1671 12.7072C14.3546 12.5197 14.46 12.2653 14.46 12.0001C14.46 11.7349 14.3546 11.4806 14.1671 11.293C13.9796 11.1055 13.7252 11.0001 13.46 11.0001H6.57C6.54766 10.9253 6.52094 10.8518 6.49 10.7801L4.1 5.41013C4.01873 5.22309 3.99658 5.01568 4.03653 4.8157C4.07648 4.61572 4.17662 4.43273 4.32352 4.29128C4.47041 4.14982 4.65705 4.05666 4.85839 4.02428C5.05973 3.9919 5.26617 4.02186 5.45 4.11013L19.45 11.1101C19.6138 11.194 19.7513 11.3215 19.8473 11.4786C19.9433 11.6356 19.994 11.8161 19.994 12.0001C19.994 12.1842 19.9433 12.3647 19.8473 12.5217C19.7513 12.6787 19.6138 12.8062 19.45 12.8901Z"
+                                    fill="white" />
+                            </svg></button>
+                    </form>
+                </div>
+            </span>
+        </div>
+        <div class="box-9">
+            <span class="inside-box9">
+                <img src="./Pictures/Logo~1.png" alt="Logo~1" class="img-box9">
+                <nav class="box9-nav">
+                    <ul>
+                        <li class="list-nav"><a href="#">Home</a></li>
+                        <li class="list-nav"><a href="#">About</a></li>
+                        <li class="list-nav"><a href="#">Language</a></li>
+                        <li class="list-nav"><a href="#">Portfolio</a></li>
+                        <li class="list-nav"><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+                <p class="last-box9">Copyright © 2024 micka.</p>
+            </span>
+
+        </div>
+        <div id="scroll-1">
+            <a href="#home-1"><i class="fa-regular fa-circle-up"></i></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

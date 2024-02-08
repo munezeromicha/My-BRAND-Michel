@@ -1,0 +1,14 @@
+#form-0{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-left: -40%;
+}
+@media (max-width: 1500px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+    }
+}

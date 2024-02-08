@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+body {
+  font-family: "Work Sans";
+  overflow-x: hidden;
+  background: var(--BG-Shade, #f5fcff);
+}
+.whole-page{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
