@@ -10,11 +10,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Admin.css">
     <link rel="stylesheet" href="./Form.css">
-    <script defer src="./Crud.js"></script>
+    <script defer src="./Crud3.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Admin-panel</title>
+
+    <style>
+          .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+    </style>
 </head>
 
 <body>
@@ -144,7 +153,7 @@
                                 <path
                                     d="M4 24H14V26H4V24ZM4 18H14V20H4V18ZM26 14H6C5.46957 14 4.96086 13.7893 4.58579 13.4142C4.21071 13.0391 4 12.5304 4 12V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H26C26.5304 4 27.0391 4.21071 27.4142 4.58579C27.7893 4.96086 28 5.46957 28 6V12C28 12.5304 27.7893 13.0391 27.4142 13.4142C27.0391 13.7893 26.5304 14 26 14ZM6 6V12H26V6H6ZM26 28H20C19.4696 28 18.9609 27.7893 18.5858 27.4142C18.2107 27.0391 18 26.5304 18 26V20C18 19.4696 18.2107 18.9609 18.5858 18.5858C18.9609 18.2107 19.4696 18 20 18H26C26.5304 18 27.0391 18.2107 27.4142 18.5858C27.7893 18.9609 28 19.4696 28 20V26C28 26.5304 27.7893 27.0391 27.4142 27.4142C27.0391 27.7893 26.5304 28 26 28ZM20 20V26H26V20H20Z"
                                     fill="#8E8E93" />
-                            </svg><a href="#">Blogs</a></li>
+                            </svg><a href="../CRUD2/Crud2.html">Blogs</a></li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="29" viewBox="0 0 24 29"
                                 fill="none">
                                 <path
@@ -156,7 +165,7 @@
                                 <path
                                     d="M12 25.375C9.7 25.375 7.696 24.4538 5.988 22.6115C4.28 20.7692 3.30067 18.4682 3.05 15.7083H5.1C5.33333 17.8028 6.10433 19.5347 7.413 20.9042C8.72167 22.2736 10.2507 22.9583 12 22.9583C13.95 22.9583 15.6043 22.1379 16.963 20.497C18.3217 18.856 19.0007 16.8571 19 14.5C19 12.1437 18.321 10.1452 16.963 8.50425C15.605 6.86333 13.9507 6.04247 12 6.04167C10.85 6.04167 9.775 6.36389 8.775 7.00833C7.775 7.65278 6.93333 8.53889 6.25 9.66667H9V12.0833H3V4.83333H5V7.67292C5.85 6.38403 6.88767 5.38715 8.113 4.68229C9.33833 3.97743 10.634 3.625 12 3.625C13.25 3.625 14.421 3.91218 15.513 4.48654C16.605 5.0609 17.555 5.83585 18.363 6.81137C19.171 7.78851 19.8127 8.93643 20.288 10.2551C20.7633 11.5738 21.0007 12.9888 21 14.5C21 16.0104 20.7627 17.4254 20.288 18.7449C19.8133 20.0644 19.1717 21.2123 18.363 22.1886C17.5543 23.165 16.6043 23.9403 15.513 24.5147C14.4217 25.089 13.2507 25.3758 12 25.375ZM14.8 19.575L11 14.9833V8.45833H13V14.0167L16.2 17.8833L14.8 19.575Z"
                                     fill="#8E8E93" />
-                            </svg><a href="#">History</a></li>
+                            </svg><a href="#">Queries</a></li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="29" viewBox="0 0 24 29"
                                 fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -198,29 +207,31 @@
                 <!-- <div id="form-0"> -->
                     <form method="post" id="form">
                         <div class="one">
-                            <label for="">Title</label>
+                            <label for="" id="headOne">Title</label>
                             <input type="text" name="title" placeholder="enter your title" class="form-control"
                                 id="myTitle">
-                            <div class="error"></div>
+                            <div class="error" id="oneError"></div>
                         </div>
                         <div class="one">
-                            <label for="">Insert Photo</label>
+                            <label for="" id="headOne">Insert Photo</label>
                             <input type="file" accept="image/*" id="photo">
                             <div class="error"></div>
                         </div>
 
                         <div class="form-group">
                             <div class="one">
-                                <label for="">Description</label>
+                                <label for="" id="headOne">Description</label>
                                 <textarea class="form-control" id="summernote" name="description"></textarea>
-                                <div class="error"></div>
+                                <div class="error" id="oneError"></div>
                             </div>
                         </div>
                         <div id="mybtn">
-                        <button type="submit" id="add-1" onclick="mySave()">submit</button>
-                        <button type="submit" id="add-1" onclick="del()">Clear</button>
+                        <button type="submit" id="quickSub" onclick="mySave()">submit</button>
+                        <button type="submit" id="quickSub" onclick="del()">Clear</button>
                     </div>
                     </form>
+
+                    <!-- <div id="cardContainer"></div> -->
                 </div>
                 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
                 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>

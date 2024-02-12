@@ -1,14 +1,14 @@
 // the beggining of slide function
 
-// function toggleMenu() {
-//     // alert("I am clicked!");
-//     const menu = document.querySelector('.menu');
-//     menu.classList.toggle('active');
-// }
-// function closeMenu() {
-//     const menu = document.querySelector('.menu');
-//     menu.classList.remove('active');
-// }
+function toggleMenu() {
+    // alert("I am clicked!");
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+function closeMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('active');
+}
 
 // function xScroll(horizontal){
 //     const first = document.querySelector('.box6-over')
@@ -28,39 +28,39 @@
 
 
 
-function autoSlide() {
-    const container = document.querySelector('.myBlog');
-    const cards = document.querySelectorAll('.myCard');
-    const firstCard = cards[0];
-    const cardWidth = firstCard.offsetWidth + parseInt(window.getComputedStyle(firstCard).marginRight);
+// function autoSlide() {
+//     const container = document.querySelector('.myBlog');
+//     const cards = document.querySelectorAll('.myCard');
+//     const firstCard = cards[0];
+//     const cardWidth = firstCard.offsetWidth + parseInt(window.getComputedStyle(firstCard).marginRight);
     
-    // Clone the first card and append it to the end
-    container.appendChild(firstCard.cloneNode(true));
+//     // Clone the first card and append it to the end
+//     container.appendChild(firstCard.cloneNode(true));
     
-    let position = 0;
+//     let position = 0;
     
-    // Slide cards to the left
-    function slideLeft() {
-      position -= cardWidth;
-      container.style.transform = `translateX(${position}px)`;
-      container.style.transition = 'transform 1s ease-in-out';
+//     // Slide cards to the left
+//     function slideLeft() {
+//       position -= cardWidth;
+//       container.style.transform = `translateX(${position}px)`;
+//       container.style.transition = 'transform 1s ease-in-out';
       
-      // Reset position and transition when last card is reached
-      if (position <= -container.scrollWidth + cardWidth) {
-        setTimeout(() => {
-          position = 0;
-          container.style.transform = `translateX(${position}px)`;
-          container.style.transition = 'none';
-        }, 1000);
-      }
-    }
+//       // Reset position and transition when last card is reached
+//       if (position <= -container.scrollWidth + cardWidth) {
+//         setTimeout(() => {
+//           position = 0;
+//           container.style.transform = `translateX(${position}px)`;
+//           container.style.transition = 'none';
+//         }, 1000);
+//       }
+//     }
     
-    // Automatically slide cards every 3 seconds
-    setInterval(slideLeft, 5000);
-  }
+//     // Automatically slide cards every 3 seconds
+//     setInterval(slideLeft, 5000);
+//   }
   
-  // Call autoSlide function when the page is loaded
-  window.addEventListener('load', autoSlide);
+//   // Call autoSlide function when the page is loaded
+//   window.addEventListener('load', autoSlide);
 
 
 
@@ -155,3 +155,56 @@ function validateInputs(){
 }
 
 // the end of form validation
+
+
+
+
+function retrieve() {
+    let myBlogs = [];
+    let allBlogs = localStorage.getItem("allBlog");
+    let thePic = localStorage.getItem("theImg");
+    myBlogs = allBlogs ? JSON.parse(allBlogs) : [];
+  
+    let container = document.getElementById('all');
+    // let house = document.getElementById('single');
+  
+  
+    myBlogs.forEach(myBlog => {
+      const card = document.createElement("div")
+      card.innerHTML = `
+      
+      <div class="myCard">
+      <img src="./Pictures/benjamin-zanatta-WbkfJ2TmSug-unsplash.jpg" alt="" id="pic-1">
+      <div id="word-1">
+          <p class="cont-box6-p">22 Oct, 2020 <br> <br>
+              <i class="fa-regular fa-thumbs-up"> 4k</i> &nbsp;
+              <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
+
+          </p>
+      </div>
+      <div id="the-1">
+          <h1>${myBlog.myContent}</h1>
+      </div>
+      <div id="p-2">
+          <p>${myBlog.areaText}</p>
+      </div>
+      <div id="our-btn">
+          <button id="press-1"><a href="./Single-Blog/Blog.html" target="_blank" id="under">Visit</a></button>
+      </div>
+  </div>
+      `;
+  
+      document.addEventListener("DOMContentLoaded", () => {
+        const getImageUrl = localStorage.getItem("imagePath");
+  
+        if(getImageUrl){
+          document.querySelector('#insertImg').setAttribute("src", getImageUrl);
+        }
+      });
+      
+      container.appendChild(card);
+    });
+  
+  }
+  
+  retrieve();

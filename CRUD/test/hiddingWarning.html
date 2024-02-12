@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputField">
+<button id="submitButton">Submit</button>
+<div id="warningText" style="color: red; display: none;">Field cannot be empty</div>
+
+</body>
+</html>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const inputField = document.getElementById("inputField");
+    const warningText = document.getElementById("warningText");
+
+    // Function to show warning text
+    function showWarning() {
+        warningText.style.display = "block";
+    }
+
+    // Function to hide warning text
+    function hideWarning() {
+        warningText.style.display = "none";
+    }
+
+    // Add event listener to input field
+    inputField.addEventListener("input", function() {
+        if (inputField.value.trim() === "") {
+            showWarning();
+        } else {
+            hideWarning();
+        }
+    });
+
+    // Add event listener to submit button
+    const submitButton = document.getElementById("submitButton");
+    submitButton.addEventListener('click', function() {
+        if (inputField.value.trim() === "") {
+            showWarning();
+        } else {
+            hideWarning();
+            // Proceed with submission logic here
+        }
+    });
+});
+
+</script>

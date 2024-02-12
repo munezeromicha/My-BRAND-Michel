@@ -1,15 +1,18 @@
-var arrTwo = [1,2,3,4,5,6,7,8,9,10];
+var arrTwo = [1,2,3,4,5];
 
 function reversing(arrOne){
-    let holdOne = [];
-    for(var i = arrOne.length - 1; i >= 0; i--){
-        holdOne.push(arrOne[i]);
+    let first_nbr = 0;
+    let last_nbr = arrOne.length - 1;
+
+    while(last_nbr > first_nbr){
+        var temp_var = arrOne[first_nbr];
+        arrOne[first_nbr] = arrOne[last_nbr];
+        arrOne[last_nbr] = temp_var;
+
+    first_nbr ++;
+    last_nbr --;
     }
-    if(holdOne.length === arrOne.length){
-        return holdOne;
-    }else{
-        console.log("You are wrong!")
-    }
+    return arrOne;
     
 }
 console.log(reversing(arrTwo));

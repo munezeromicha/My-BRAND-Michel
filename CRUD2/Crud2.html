@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./Pictures/LG-1.png">
+
+    <script defer src="./Card.js"></script>
     <link rel="stylesheet" href="./Crud2.css">
     <link rel="stylesheet" href="./Header.css">
     <link rel="stylesheet" href="./Below.css">
@@ -12,7 +14,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <title>CRUD</title>
+    <!-- <style>
+        .cont-port-1 {
+  display: flex;
+  padding-bottom: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Gray-100, #e6e8eb);
+  background: var(--Gray-White, #fff);
+  /* width: 100%; */
+}
+    </style> -->
 </head>
 
 <body>
@@ -48,7 +65,7 @@
                                 <path
                                     d="M3 13.2373H11V3.23729H3V13.2373ZM3 21.2373H11V15.2373H3V21.2373ZM13 21.2373H21V11.2373H13V21.2373ZM13 3.23729V9.23729H21V3.23729H13Z"
                                     fill="#2F80ED" />
-                            </svg><a href="#">Dashboard</a></li>
+                            </svg><a href="../Admin-panel/Admin.html">Dashboard</a></li>
                         <!-- <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20"
                                 fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -95,19 +112,19 @@
                                 <path
                                     d="M4 24H14V26H4V24ZM4 18H14V20H4V18ZM26 14H6C5.46957 14 4.96086 13.7893 4.58579 13.4142C4.21071 13.0391 4 12.5304 4 12V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H26C26.5304 4 27.0391 4.21071 27.4142 4.58579C27.7893 4.96086 28 5.46957 28 6V12C28 12.5304 27.7893 13.0391 27.4142 13.4142C27.0391 13.7893 26.5304 14 26 14ZM6 6V12H26V6H6ZM26 28H20C19.4696 28 18.9609 27.7893 18.5858 27.4142C18.2107 27.0391 18 26.5304 18 26V20C18 19.4696 18.2107 18.9609 18.5858 18.5858C18.9609 18.2107 19.4696 18 20 18H26C26.5304 18 27.0391 18.2107 27.4142 18.5858C27.7893 18.9609 28 19.4696 28 20V26C28 26.5304 27.7893 27.0391 27.4142 27.4142C27.0391 27.7893 26.5304 28 26 28ZM20 20V26H26V20H20Z"
                                     fill="#8E8E93" />
-                            </svg><a href="#">Blogs</a></li>
+                            </svg><a href="../CRUD2/Crud2.html">Blogs</a></li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="29" viewBox="0 0 24 29"
                                 fill="none">
                                 <path
                                     d="M4.80001 7.25001H0.936007C0.492007 7.25001 0.0480075 7.71401 0.108008 8.46801L1.98001 22.9535C1.98001 22.9535 4.20001 12.2815 4.63201 9.71501C4.76401 8.94651 5.36401 8.70001 5.80801 8.70001H12C12 8.70001 11.16 5.68401 11.076 5.35051C10.932 4.71251 10.668 4.35001 10.14 4.35001H6.16801C5.73601 4.35001 5.32801 4.68351 5.20801 5.27801C5.10001 5.85801 4.80001 7.25001 4.80001 7.25001ZM10.656 7.25001H5.85601C5.85601 7.25001 6.36001 5.80001 6.90001 5.80001H9.45601C10.032 5.80001 10.656 7.25001 10.656 7.25001ZM3.20401 23.5625C2.83201 24.244 2.29201 24.65 1.69201 24.65H20.568C21.216 24.65 21.672 24.2005 21.804 23.4465C22.332 20.271 23.82 11.2085 23.82 11.2085C23.904 10.4835 23.46 10.15 23.076 10.15H19.2V8.01851C19.2 7.78651 18.888 7.25001 18.408 7.25001H13.896C13.272 7.25001 12.852 8.09101 12.852 8.09101L12 10.15H6.70801C6.32401 10.15 5.95201 10.4255 5.88001 10.875C5.88001 10.875 3.97201 20.59 3.81601 21.5035C3.73201 22.04 3.55201 22.939 3.20401 23.5625ZM18.456 10.15H13.2C13.2 10.15 13.896 8.70001 14.556 8.70001H17.304C18.156 8.70001 18.456 10.15 18.456 10.15Z"
                                     fill="#8E8E93" />
-                            </svg><a href="#">Portfolio</a></li>
+                            </svg><a href="../CRUD2/Crud2.html">Portfolio</a></li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="29" viewBox="0 0 24 29"
                                 fill="none">
                                 <path
                                     d="M12 25.375C9.7 25.375 7.696 24.4538 5.988 22.6115C4.28 20.7692 3.30067 18.4682 3.05 15.7083H5.1C5.33333 17.8028 6.10433 19.5347 7.413 20.9042C8.72167 22.2736 10.2507 22.9583 12 22.9583C13.95 22.9583 15.6043 22.1379 16.963 20.497C18.3217 18.856 19.0007 16.8571 19 14.5C19 12.1437 18.321 10.1452 16.963 8.50425C15.605 6.86333 13.9507 6.04247 12 6.04167C10.85 6.04167 9.775 6.36389 8.775 7.00833C7.775 7.65278 6.93333 8.53889 6.25 9.66667H9V12.0833H3V4.83333H5V7.67292C5.85 6.38403 6.88767 5.38715 8.113 4.68229C9.33833 3.97743 10.634 3.625 12 3.625C13.25 3.625 14.421 3.91218 15.513 4.48654C16.605 5.0609 17.555 5.83585 18.363 6.81137C19.171 7.78851 19.8127 8.93643 20.288 10.2551C20.7633 11.5738 21.0007 12.9888 21 14.5C21 16.0104 20.7627 17.4254 20.288 18.7449C19.8133 20.0644 19.1717 21.2123 18.363 22.1886C17.5543 23.165 16.6043 23.9403 15.513 24.5147C14.4217 25.089 13.2507 25.3758 12 25.375ZM14.8 19.575L11 14.9833V8.45833H13V14.0167L16.2 17.8833L14.8 19.575Z"
                                     fill="#8E8E93" />
-                            </svg><a href="#">History</a></li>
+                            </svg><a href="#">Queries</a></li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="29" viewBox="0 0 24 29"
                                 fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -140,8 +157,8 @@
 
                 </div>
 
-                <div class="content-1">
-                    <div class="cont-port-1">
+                <div class="content_1" id="all">
+                    <!-- <div class="cont-port-1" id="single">
                         <img src="./Pictures/image_processing20200616-29208-1lm1ktf.jpg" alt="cont-1"
                             class="cont-pic-1">
                         <p class="cont-p-1">UI-UX DESIGN</p>
@@ -152,10 +169,10 @@
                                 <button class="cont-btn-1"><i class="fa-solid fa-pen"></i></button>
                                 <button class="cont-btn-2"><i class="fa-solid fa-trash-can"></i></button>
                             </div>
-                    </div>
+                    </div> -->
 
 
-                    <div class="content-1">
+                    <!-- <div class="content-1">
                         <div class="cont-port-1">
                             <img src="./Pictures/image_processing20200616-29208-1lm1ktf.jpg" alt="cont-1"
                                 class="cont-pic-1">
@@ -185,7 +202,7 @@
                                 <button class="cont-btn-2"><i class="fa-solid fa-trash-can"></i></button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
