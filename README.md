@@ -1,4 +1,4 @@
-# Frontend Project README
+# Frontend Project MyBrand
 
 Welcome to MyBrand-FE! This project is a frontend application built with HTML, CSS, and JavaScript. It includes validation on all input fields and an admin panel for managing content.
 
