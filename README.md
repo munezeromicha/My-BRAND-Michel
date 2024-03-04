@@ -1,6 +1,6 @@
 # Frontend Project README
 
-Welcome to [Your Project Name]! This project is a frontend application built with HTML, CSS, and JavaScript. It includes validation on all input fields and an admin panel for managing content.
+Welcome to MyBrand-FE! This project is a frontend application built with HTML, CSS, and JavaScript. It includes validation on all input fields and an admin panel for managing content.
 
 ## Features
 
@@ -21,4 +21,4 @@ To get started with this project, follow these steps:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone [repository-url]
+git clone https://github.com/munezeromicha/My-BRAND-Michel.git
