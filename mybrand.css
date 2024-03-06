@@ -967,19 +967,19 @@ li a {
   display: flex;
   padding: 100px 0px;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 24px;
   width: 100%;
   background-color: #fff;
-  overflow-x: auto;
+  /* overflow-x: auto; */
 }
 .box6-top {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  width: 100%;
+  /* width: 100%; */
 }
 .box6-title {
   color: var(--Gray-900, #132238);
@@ -1003,8 +1003,8 @@ li a {
 }
 .myCard{
   display: flex;
-  height: auto;
-  width: 50%;
+  /* height: 100%; */
+  width: 30%;
   padding-bottom: 24px;
   flex-direction: column;
   justify-content: center;
@@ -1013,17 +1013,18 @@ li a {
   border-radius: 8px;
 border: 1px solid var(--Gray-50, #F0F1F3);
 background: var(--Gray-White, #FFF);
+justify-self: center;
 /* margin-left: 5%; */
 /* box-shadow: 0px 12px 64px 0px rgba(28, 25, 25, 0.12); */
 }
-.cont-box6 {
+/* .cont-box6 {
   display: flex;
   padding: 0px 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 70px;
-}
+} */
 .cont-box6 {
   display: flex;
   padding-bottom: 24px;
@@ -1078,9 +1079,17 @@ background: var(--Gray-White, #FFF);
 }
 .boxOver {
   display: flex;
+  justify-content: center ;
+  align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
+margin-left: 25%;
   gap: 15px;
-  overflow-x: auto;
+  /* width: 100%; */
+  /* overflow-x: auto; */
+}
+.boxOver:nth-child(-n+5) {
+  order: -1;
 }
 .box-7 {
   display: flex;
@@ -1760,7 +1769,7 @@ background: var(--Gray-White, #FFF);
   .boxOver {
     flex-direction: column;
     gap: 35px;
-    /* width: 100%; */
+    width: 100%;
     margin: auto;
   }
   .box6-p {
@@ -1913,9 +1922,9 @@ background: var(--Gray-White, #FFF);
     width: 100%;
     overflow-x: hidden;
   }
-  .boxOver {
+  /* .boxOver {
     flex-direction: column;
-  }
+  } */
   .box-1 {
     display: flex;
     flex-direction: column;

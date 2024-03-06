@@ -1,45 +1,46 @@
-var form = document.getElementById('form');
-var userName = document.getElementById('name_1');
-var email = document.getElementById('name_2');
-var locate = document.getElementById('name_3');
-var pass = document.getElementById('pass_1');
-var conf = document.getElementById('pass_3');
+"use strict";
+const form = document.getElementById('form');
+const userName = document.getElementById('name_1');
+const email = document.getElementById('name_2');
+const locate = document.getElementById('name_3');
+const pass = document.getElementById('pass_1');
+const conf = document.getElementById('pass_3');
 if (form && userName && email && locate && pass && conf) {
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', e => {
         e.preventDefault();
         validateInputs();
     });
 }
-var verError = function (Element, message) {
-    var errorControl = Element.parentElement;
-    var showError = errorControl === null || errorControl === void 0 ? void 0 : errorControl.querySelector('.error');
+const verError = (Element, message) => {
+    const errorControl = Element.parentElement;
+    const showError = errorControl === null || errorControl === void 0 ? void 0 : errorControl.querySelector('.error');
     if (showError) {
         showError.innerText = message;
         errorControl.classList.add('error');
         errorControl.classList.remove('success');
     }
 };
-var verPass = function (Element) {
-    var errorControl = Element.parentElement;
-    var showError = errorControl === null || errorControl === void 0 ? void 0 : errorControl.querySelector('.error');
+const verPass = (Element) => {
+    const errorControl = Element.parentElement;
+    const showError = errorControl === null || errorControl === void 0 ? void 0 : errorControl.querySelector('.error');
     if (showError) {
         showError.innerText = '';
         errorControl.classList.add('success');
         errorControl.classList.remove('error');
     }
 };
-var checkEmail = function (email) {
-    var sign = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const checkEmail = (email) => {
+    const sign = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return sign.test(String(email).toLowerCase());
 };
 function validateInputs() {
     if (!userName || !email || !locate || !pass || !conf)
         return;
-    var fullName = userName.value.trim();
-    var inEmail = email.value.trim();
-    var oneLocate = locate.value.trim();
-    var firstPass = pass.value.trim();
-    var secPass = conf.value.trim();
+    const fullName = userName.value.trim();
+    const inEmail = email.value.trim();
+    const oneLocate = locate.value.trim();
+    const firstPass = pass.value.trim();
+    const secPass = conf.value.trim();
     if (fullName === '') {
         verError(userName, 'Name field is required!');
     }

@@ -7,8 +7,6 @@ var email = document.getElementById('in_2');
 var locate = document.getElementById('in_3');
 var sub = document.getElementById('in_4');
 var mess = document.getElementById('in_5');
-// const pass = document.getElementById('pass_1') as HTMLInputElement | null;
-// const confirm = document.getElementById('pass_3') as HTMLInputElement | null;
 if (form && userName && email && locate && sub && mess) {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -39,6 +37,19 @@ var checkEmail = function (email) {
     var sign = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return sign.test(String(email).toLowerCase());
 };
+
+const check = async(values)=>{
+    const res= await fetch('https://mybrand-be-6rxz.onrender.com/api/query',{
+        method:'POST',
+        body:JSON.stringify(values),
+        headers:{'Content-Type':'application/json'} 
+     })
+
+     const data = await res.json();
+     console.log(data);
+
+}
+
 function validateInputs() {
     if (!userName || !email || !locate || !sub || !mess)
         return;
@@ -54,35 +65,46 @@ function validateInputs() {
         verError(userName, 'Username must not be less than 8 characters');
     }
     else {
-        verPass(userName);
+        // verPass(userName);
+        if (inEmail === '') {
+            verError(email, 'Email field is required!');
+        }
+        else if (!checkEmail(inEmail)) {
+            verError(email, 'Enter a valid email!');
+        }
+        else {
+            // verPass(email);
+            if (oneLocate === '') {
+                verError(locate, 'Location field is required!');
+            }
+            else {
+                // verPass(locate);
+                if (subJect === '') {
+                    verError(sub, 'Subject field is required!');
+                }
+                else {
+                    // verPass(sub);
+                    if (messValue === '') {
+                        verError(mess, 'Message field is required');
+                    }
+                    else {
+                        // verPass(mess);
+                        const data = {
+                            name: fullName,
+                            email: inEmail,
+                            message: messValue
+                        }
+                        check(data);
+                    }
+
+                }
+            }
+        }
     }
-    if (inEmail === '') {
-        verError(email, 'Email field is required!');
-    }
-    else if (!checkEmail(inEmail)) {
-        verError(email, 'Enter a valid email!');
-    }
-    else {
-        verPass(email);
-    }
-    if (oneLocate === '') {
-        verError(locate, 'Location field is required!');
-    }
-    else {
-        verPass(locate);
-    }
-    if (subJect === '') {
-        verError(sub, 'Subject field is required!');
-    }
-    else {
-        verPass(sub);
-    }
-    if (messValue === '') {
-        verError(mess, 'Message field is required');
-    }
-    else {
-        verPass(mess);
-    }
+
+
+
+
 }
 /* the end of form validation */
 

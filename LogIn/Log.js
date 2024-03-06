@@ -29,9 +29,24 @@ var checkEmail = function (email) {
     var sign = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return sign.test(String(email).toLowerCase());
 };
+
+
+const check = async(values)=>{
+    const res= await fetch('https://mybrand-be-6rxz.onrender.com/api/login',{
+        method:'POST',
+        body:JSON.stringify(values),
+        headers:{'Content-Type':'application/json'} 
+     })
+
+     const data = await res.json();
+     console.log(data);
+
+     window.location.href="/Admin-panel/Admin.html";
+}
+
 function validateInputs() {
-    var inEmail = (emailInput === null || emailInput === void 0 ? void 0 : emailInput.value.trim()) || '';
-    var firstPass = (passInput === null || passInput === void 0 ? void 0 : passInput.value.trim()) || '';
+    var inEmail =  emailInput.value.trim();
+    var firstPass =  passInput.value.trim();
     if (inEmail === '') {
         verError(emailInput, 'Email field is Required!');
     }
@@ -39,15 +54,21 @@ function validateInputs() {
         verError(emailInput, 'Enter the valid email!');
     }
     else {
-        verPass(emailInput);
+        // verPass(emailInput);
+        if (firstPass === '') {
+            verError(passInput, 'Password is required!');
+        }
+        else if (firstPass.length < 8) {
+            verError(passInput, 'Password must be at least 8 character!');
+        }
+        else {
+            // verPass(passInput);
+            const data = {
+                email: inEmail,
+                password: firstPass
+            }
+            check(data);
+        }
     }
-    if (firstPass === '') {
-        verError(passInput, 'Password is required!');
-    }
-    else if (firstPass.length < 8) {
-        verError(passInput, 'Password must be at least 8 character!');
-    }
-    else {
-        verPass(passInput);
-    }
+
 }
