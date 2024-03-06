@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form action="">
+
+    <input type="file" name="" id="photo">
+    <img id="letSee" src="" alt="Priview">
+
+  </form>
+
+</body>
+</html>
+
+  <script>
+        document.querySelector('#photo').addEventListener("change", function(){
+      const reader = new FileReader();
+      reader.addEventListener("load", () => {
+        localStorage.setItem("recent-image", reader.result);
+      });
+      reader.readAsDataURL(this.files[0]);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const recentImageDataUrl = localStorage.getItem("recent-image");
+
+      if(recentImageDataUrl){
+        document.querySelector("#letSee").setAttribute("src", recentImageDataUrl)
+      }
+    })
+  </script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Storage Card</title>
+<style>
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+  <h2>Enter Data</h2>
+  <form id="dataForm">
+    <input type="text" id="dataInput" placeholder="Enter data">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="cardContainer"></div>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const dataForm = document.getElementById("dataForm");
+  const dataInput = document.getElementById("dataInput");
+  const cardContainer = document.getElementById("cardContainer");
+
+  // Function to create a card
+  function createCard(id, data) {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.dataset.id = id; // Set data-id attribute for identification
+    card.innerHTML = `
+      <span>${data}</span>
+      <button class="edit-btn">Edit</button>
+      <button class="delete-btn">Delete</button>
+    `;
+    cardContainer.appendChild(card);
+  }
+
+  // Event listener for form submission
+  dataForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const inputData = dataInput.value.trim();
+    if (inputData !== "") {
+      // Save data to local storage
+      const id = Date.now(); // Generate a unique ID
+      localStorage.setItem(id, inputData);
+
+      // Create a card with the entered data
+      createCard(id, inputData);
+
+      // Clear input field
+      dataInput.value = "";
+    } else {
+      alert("Please enter some data.");
+    }
+  });
+
+  // Function to handle edit action
+  function editCard(card) {
+    const span = card.querySelector("span");
+    const editedData = prompt("Enter the new data:", span.textContent);
+    if (editedData !== null) {
+      const id = card.dataset.id;
+      localStorage.setItem(id, editedData);
+      span.textContent = editedData;
+    }
+  }
+
+  // Function to handle delete action
+  function deleteCard(card) {
+    const id = card.dataset.id;
+    localStorage.removeItem(id);
+    card.remove();
+  }
+
+  // Event delegation for edit and delete buttons
+  cardContainer.addEventListener("click", function(event) {
+    const target = event.target;
+    if (target.classList.contains("edit-btn")) {
+      const card = target.closest(".card");
+      editCard(card);
+    } else if (target.classList.contains("delete-btn")) {
+      const card = target.closest(".card");
+      deleteCard(card);
+    }
+  });
+
+  // Display existing data from local storage
+  for (let i = 0; i < localStorage.length; i++) {
+    const id = localStorage.key(i);
+    const data = localStorage.getItem(id);
+    createCard(id, data);
+  }
+});
+
+
+  </script>
+</body>
+</html>

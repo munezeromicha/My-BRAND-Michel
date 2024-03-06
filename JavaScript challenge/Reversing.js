@@ -1,4 +1,4 @@
-var arrTwo = [1,2,3,4,5,6,7,8,9,10];
+var arrTwo = [1,2,3,4,5];
 
 function reversing(arrOne){
     let holdOne = [];
@@ -6,7 +6,7 @@ function reversing(arrOne){
         holdOne.push(arrOne[i]);
     }
     if(holdOne.length === arrOne.length){
-        return holdOne.join();
+        return holdOne;
     }else{
         console.log("You are wrong!")
     }
