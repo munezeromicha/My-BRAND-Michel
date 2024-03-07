@@ -219,20 +219,24 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
     .then(blogs => {
         const blogsContainer = document.getElementById('Blogs');
         blogs.forEach(blog => {
-            console.log(blog._id);
+            // console.log(blogs);
             const blogElement = document.createElement('div');
+            blogElement.setAttribute('key', blog._id);
+            blogElement.className = 'cont-card'; 
+            
             blogElement.innerHTML = `
-                <div class="myCard" key=${blog._id}>
+
                     <img src="${blog.image}" alt="img-box6" class="img-box6">
-                    <p class="cont-box6-p">22 Oct, 2020 <br> <br>
-                        <i class="fa-regular fa-thumbs-up"> 4k</i> &nbsp;
+                    <p class="cont-box6-p">22 Oct, 2020 </br> </br>
+                        <i class="fa-regular fa-thumbs-up">&nbsp;${blog.like}</i> &nbsp;
                         <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
                     </p>
                     <h2>${blog.title}</h2>
                     <p class="cont-desc-p">${blog.content}</p>
-                    <div class="a-box6">visit Site &nbsp; <i
-                        class="fa-solid fa-arrow-right"></i></div>
-                </div>
+                    <span class="a-box6">Readmore &nbsp; 
+                    <i class="fa-solid fa-arrow-right"></i></span>
+
+                
             `;
             blogsContainer.appendChild(blogElement);
 
@@ -240,7 +244,7 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
             singleBlog .forEach((oneBlog) => {
             oneBlog.addEventListener("click", (e) => {
         console.log("Done");
-        const id = e.target.closest(".myCard").getAttribute("key");
+        const id = e.target.closest(".cont-card").getAttribute("key");
         window.location.href = `/Single-Blog/Blog.html?id=${id}`;
       });
         });
@@ -248,6 +252,12 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
     })
 })
     .catch(error => console.error('Error fetching blogs:', error));
+
+
+
+
+
+
 
 
 
