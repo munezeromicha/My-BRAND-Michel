@@ -150,10 +150,13 @@ word-break: break-all;
 width: 100%;
 text-wrap: wrap;
 }
-.comment{
+#comment{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 7px;
 }
 .com-1{
   display: flex;
@@ -190,24 +193,25 @@ line-height: normal;
   display: flex;
   flex-direction: column;
 }
-.av-1{
+#av-1{
   /* border: 1px solid #000; */
-  width: 5%;
-  height: 5%;
-  border-radius: 50%;
+font-size: 30px;
+  
 }
 .line-3{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 0px;
+  justify-self: center;
   align-self: center;
-  width: 90%;
+  width: 60%;
+  margin-left: 1%;
 }
-/* #eye-1{
+/* #eye-line{
   display: flex;
   align-self: center;
- margin-bottom: -3%;
-  z-index: 1;
+ margin-left: 5%;
+
 } */
 .card-1{
   display: flex;
@@ -289,6 +293,7 @@ line-height: 150%;
   justify-content: center;
   gap: 55px;
   width: 100%;
+  padding: 30px;
   /* background-color: cyan; */
 }
 .contact-box8 {
@@ -297,10 +302,10 @@ line-height: 150%;
   width: 100%;
   color: var(--Heading-color, #282938);
   font-family:"Work Sans";
-  font-size: 38px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px; 
+  line-height: 24px;
 }
 .form-1 {
   display: flex;
@@ -396,7 +401,7 @@ label{
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 12%;
+  width: 10%;
 }
 .footer{
   display: inline-flex;

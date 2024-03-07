@@ -364,7 +364,7 @@ flex-shrink: 0;
 border-radius: 10px;
 background: #FFF;
 }
-.comment{
+#comment{
     display: flex;
     flex-direction: column;
     gap: 20px;
