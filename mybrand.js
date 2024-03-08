@@ -72,11 +72,11 @@
 // The beggining of form validation
 
 // const form = document.getElementById('form')
-// var userName = document.getElementById('inputOne')
-// const email = document.getElementById('in_2')
+// var username = document.getElementById('username')
+// const email = document.getElementById('email')
 // const locate = document.getElementById('in_3')
 // const sub = document.getElementById('in_4')
-// const mess = document.getElementById('in_5')
+// const mess = document.getElementById('message')
 // const pass = document.getElementById('pass_1')
 // const confirm = document.getElementById('pass_3')
 
@@ -106,19 +106,19 @@
 //         return sign.test(String(email).toLowerCase());
 //     }
 // function validateInputs(){
-//     const fullName = userName.value.trim();
+//     const fullName = username.value.trim();
 //     const inEmail = email.value.trim();
 //     const oneLocate = locate.value.trim();
 //     const subJect = sub.value.trim();
 //     const messValue = mess.value.trim();
 
 //     if(fullName === ''){
-//         verError(userName, 'Name field is required!');
+//         verError(username, 'Name field is required!');
 //     } else if(fullName < 8){
-//         verError(userName, 'username must not be less than 8 character')
+//         verError(username, 'username must not be less than 8 character')
 //     }
 //     else{
-//         verPass(userName);
+//         verPass(username);
 //     }
 
 //     if(inEmail ===''){
@@ -219,46 +219,143 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
     .then(blogs => {
         const blogsContainer = document.getElementById('Blogs');
         blogs.forEach(blog => {
-            // console.log(blogs);
+        // console.log(blog);
+
             const blogElement = document.createElement('div');
             blogElement.setAttribute('key', blog._id);
             blogElement.className = 'cont-card'; 
             
+            // Limiting content to a fixed size
+            const truncatedContent = blog.content.length > 100 ? blog.content.substring(0, 100) + '...' : blog.content;
+
             blogElement.innerHTML = `
-
-                    <img src="${blog.image}" alt="img-box6" class="img-box6">
-                    <p class="cont-box6-p">22 Oct, 2020 </br> </br>
-                        <i class="fa-regular fa-thumbs-up">&nbsp;${blog.like}</i> &nbsp;
-                        <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
-                    </p>
-                    <h2>${blog.title}</h2>
-                    <p class="cont-desc-p">${blog.content}</p>
-                    <span class="a-box6">Readmore &nbsp; 
-                    <i class="fa-solid fa-arrow-right"></i></span>
-
-                
+                <img src="${blog.image}" alt="img-box6" class="img-box6">
+                <p class="cont-box6-p">
+                  <span><i class="fa-regular fa-thumbs-up" id="like">&nbsp;${blog.like}</i></span>
+                  <span><i class="fa-solid fa-comment" id="comment"></i> 246 Comments </span>   
+                    
+                </p>
+                <h2>${blog.title}</h2>
+                <p class="cont-desc-p">${truncatedContent}</p>
+                <span class="a-box6">Read more &nbsp; 
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
             `;
             blogsContainer.appendChild(blogElement);
 
-            const singleBlog = document.querySelectorAll(".a-box6");
-            singleBlog .forEach((oneBlog) => {
-            oneBlog.addEventListener("click", (e) => {
-        console.log("Done");
-        const id = e.target.closest(".cont-card").getAttribute("key");
-        window.location.href = `/Single-Blog/Blog.html?id=${id}`;
-      });
+            // Adding event listener to show full content
+            const readMoreLinks = blogElement.querySelectorAll(".a-box6");
+            readMoreLinks.forEach((link) => {
+                link.addEventListener("click", (e) => {
+                    const id = e.target.closest(".cont-card").getAttribute("key");
+                    window.location.href = `/Single-Blog/Blog.html?id=${id}`;
+                });
+            });
         });
-        
     })
-})
     .catch(error => console.error('Error fetching blogs:', error));
 
 
 
 
+    var form = document.getElementById('form');
+    var userName = document.getElementById('username');
+    var userEmail = document.getElementById('email');
+    var userMessage = document.getElementById('message');
+    
+    if (form && userName && userEmail && userMessage) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            validateInputs();
+        });
+    }
+    
+    function validateInputs() {
+        var userValue = userName.value.trim();
+        var emailValue = userEmail.value.trim();
+        var messageValue = userMessage.value.trim();
+    
+        if (userValue === '') {
+            verError(userName, 'Name field is required!');
+        } else if (userValue.length < 8) {
+            verError(userName, 'Username must be at least 8 characters long');
+        } else {
+            // verPass(username);
+            if (emailValue === '') {
+                verError(userEmail, 'Email field is required!');
+            } else if (!checkEmail(emailValue)) {
+                verError(userEmail, 'Enter a valid email!');
+            } else {
+                // verPass(email);
+                if (messageValue === '') {
+                    verError(userMessage, 'Message field is required');
+                } else {
+                    // verPass(message);
+                    const data = {
+                        name: userValue,
+                        email: emailValue,
+                        message: messageValue
+                    };
+    
+                    fetch('https://mybrand-be-6rxz.onrender.com/api/query', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            console.error("Query created successfully");
+                            showToast("Query created successfully");
 
-
-
+                            userName.value = '';
+                            userEmail.value = '';
+                            userMessage.value = '';
+                        } else {
+                            console.log("Creating a query failed");
+                            // showToast("Creating a query failed");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        showToast("Error occurred");
+                    });
+                }
+            }
+        }
+    }
+    
+    function verError(element, message) {
+        var errorControl = element.parentElement;
+        var showError = errorControl.querySelector('.error');
+        showError.innerText = message;
+        errorControl.classList.add('error');
+        errorControl.classList.remove('success');
+    }
+    
+    function verPass(element) {
+        var errorControl = element.parentElement;
+        var showError = errorControl.querySelector('.error');
+        showError.innerText = '';
+        errorControl.classList.add('success');
+        errorControl.classList.remove('error');
+    }
+    
+    function checkEmail(email) {
+        var sign = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return sign.test(String(email).toLowerCase());
+    }
+    
+    function showToast(message) {
+        Toastify({
+            text: message,
+            duration: 3000,
+            gravity: "top",
+            position: "right",
+        }).showToast();
+    }
+    
 
 
     // const blogContainer = document.getElementById("Blogs");

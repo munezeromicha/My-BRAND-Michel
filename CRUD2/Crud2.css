@@ -3,6 +3,7 @@ body {
   font-family: "Work Sans";
   overflow-x: hidden;
   background: var(--BG-Shade, #f5fcff);
+  transition:  900ms ease-in-out;
 }
 .whole-page{
     display: flex;

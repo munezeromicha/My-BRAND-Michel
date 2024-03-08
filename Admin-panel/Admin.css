@@ -3,6 +3,7 @@ body {
   font-family: "Work Sans";
   overflow-x: hidden;
   background: var(--BG-Shade, #f5fcff);
+  transition:  900ms ease-in-out;
 }
 .container {
   display: flex;
@@ -358,8 +359,9 @@ line-height: 16px; /* 94.118% */
 }
 .left-side{
     display: flex;
-    width: 60%;
-height: 760px;
+    width: 50%;
+    margin-left: 16%;
+height: auto;
 flex-shrink: 0;
 border-radius: 10px;
 background: #FFF;
@@ -422,7 +424,7 @@ background: #FFF;
     box-shadow: 0px 12px 64px 0px rgba(28, 25, 25, 0.12);
     background-color: #0077b6;
   }
-  .simple-3{
+  #simple3{
     display: flex;
     width: 40%;
     height: 150px;
@@ -441,8 +443,9 @@ background: #FFF;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: #00b4d8;
   }
-  #over-simple{
+  #overSimple{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -464,9 +467,19 @@ background: #FFF;
     gap: 40px;
     color: #FFF;
     align-self: center;
-    margin-left: -22%;
-    margin-bottom: -22%;
-    font-size: 28px;
+    margin-left: -25%;
+    margin-bottom: -42%;
+    font-size: 20px;
+  }
+  #totalLikes{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 40px;
+    color: #FFF;
+    align-self: center;
+    margin-left: 8%;
+    /* margin-bottom: -62%; */
+    font-size: 20px;
   }
   #text-u{
     display: flex;
@@ -474,9 +487,9 @@ background: #FFF;
     gap: 40px;
     color: #FFF;
     align-self: center;
-    margin-left: -48%;
-    margin-bottom: -22%;
-    font-size: 28px;
+    margin-left: -58%;
+    margin-bottom: -42%;
+    font-size: 20px;
   }
   #text-o{
     display: flex;
@@ -485,9 +498,9 @@ background: #FFF;
     color: #FFF;
     align-self: flex-end;
     justify-self: flex-end;
-    margin-left: -32%;
+    margin-left: -42%;
     /* margin-bottom: -22%; */
-    font-size: 25px;
+    font-size: 20px;
   }
 @media (max-width: 998px){
   #text-p{
@@ -521,7 +534,7 @@ background: #FFF;
   .box-1{
     width: 100%;
   }
-  #over-simple{
+  #overSimple{
     display: flex;
     flex-direction: column;
   }
@@ -550,7 +563,7 @@ background: #FFF;
     .search__container{
         display: none;
     }
-    #over-simple{
+    #overSimple{
       display: flex;
       flex-direction: column;
     }
@@ -583,13 +596,13 @@ background: #FFF;
     #search-btn{
         display: block;
     }
-    #over-simple{
+    #overSimple{
       display: flex;
       flex-direction: column;
     }
 }
 @media (max-width: 768px) {
-  #over-simple{
+  #overSimple{
     display: flex;
     flex-direction: column;
   }

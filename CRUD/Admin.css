@@ -28,11 +28,32 @@
 }
 #headOne{
   color: #000;
+  font-size: 10px;
 }
+#image{
+  border: 0.5px solid #394149;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 10px;
+}
+label{
+  font-size: 10px;
+}
+input{
+  padding: 10px;
+  border-radius: 8px;
+  border: 0.5px solid #394149;
+  font-size: 15px;
+}
+input:focus{
+  outline: none;
+}
+
 body {
   font-family: "Work Sans";
   overflow-x: hidden;
   background: var(--BG-Shade, #f5fcff);
+  transition:  900ms ease-in-out;
 }
 .container-1 {
   display: flex;
@@ -127,6 +148,11 @@ body {
   line-height: normal;
   text-align:center;
 }
+/* #over-simple{
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+} */
 .over-box {
   display: flex;
   flex-direction: row;

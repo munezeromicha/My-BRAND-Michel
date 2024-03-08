@@ -10,6 +10,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
   font-family: "Work Sans";
+  transition:  900ms ease-in-out;
   /* background-color: green; */
 }
 html {
@@ -91,6 +92,7 @@ li a {
 #single-1{
   /* display: flex; */
   color: #5e3bee !important;
+  font-size: 25px;
 }
 .gen-1 {
   font-size: 70px;

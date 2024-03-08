@@ -1,25 +1,25 @@
 *{
     font-family: "Work Sans";
 }
-.cont-card{
+#Blogs{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     /* margin-right: 2%; */
     width: 100%;
 }
 
-.myCard{
+.cont-card{
   display: flex;
-  /* height: 100%; */
-  width: 20%;
+  /* height: 10%; */
+  width: 30%;
   padding-bottom: 24px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 44px;
+  gap: 10px;
   border-radius: 8px;
 border: 1px solid var(--Gray-50, #F0F1F3);
 background: var(--Gray-White, #FFF);
@@ -46,7 +46,16 @@ justify-self: center;
   line-height: 20px;
   word-break: break-all;
 }
-
+#titleValue{
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  color: #333;
+  word-break: break-all;
+  text-align: center;
+  font-size: 17px;
+  /* width: 80%; */
+}
 .cont-desc-p {
   display: flex;
   justify-self: center;
