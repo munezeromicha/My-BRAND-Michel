@@ -4,6 +4,7 @@ body {
   background-color: #fff;
   overflow-x: hidden;
   overflow-y: hidden;
+  transition:  900ms ease-in-out;
 }
 html {
   scroll-behavior: smooth;

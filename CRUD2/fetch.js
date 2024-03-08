@@ -8,24 +8,72 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
     .then(blogs => {
         const blogsContainer = document.getElementById('Blogs');
         blogs.forEach(blog => {
-            console.log(blog);
             const blogElement = document.createElement('div');
-            blogElement.className = 'small-container'; 
+            blogElement.className = 'cont-card';
+            blogElement.setAttribute('data-blog-id', blog._id); 
+
+            const truncatedContent = blog.content.length > 100 ? blog.content.substring(0, 100) + '...' : blog.content;
             blogElement.innerHTML = `
-                
-                    <img src="${blog.image}" alt="img-box6" class="img-box6">
-                    <p class="cont-box6-p">22 Oct, 2020 <br> <br>
-                        <i class="fa-regular fa-thumbs-up"> 4k</i> &nbsp;
-                        <i class="fa-solid fa-comment"></i> 246 Comments &nbsp;
-                    </p>
-                    <h2>${blog.title}</h2>
-                    <p class="cont-desc-p">${blog.content}</p>
-                    <button class="cont-btn-1 edit-btn"><i class="fa-solid fa-pen"></i></button>
-                    <button class="cont-btn-2 delete-btn"><i class="fa-solid fa-trash-can"></i></button>
-               
+                <img src="${blog.image}" alt="img-box6" class="img-box6">
+                <p class="cont-box6-p">
+                    <h3>${blog.updatedAt}</h3>
+                </p>
+                <h2 id="titleValue">${blog.title}</h2>
+                <p class="cont-desc-p">${truncatedContent}</p>
+                <button class="cont-btn-1 edit-btn" data-blog-id="${blog._id}"><i class="fa-solid fa-pen"></i></button>
+                <button class="cont-btn-2 delete-btn" data-blog-id="${blog._id}"><i class="fa-solid fa-trash-can"></i></button>
             `;
             
             blogsContainer.appendChild(blogElement);
         });
+
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const blogId = button.getAttribute('data-blog-id');
+                deleteBlog(blogId);
+            });
+        });
+
+        const editButtons = document.querySelectorAll('.edit-btn');
+        editButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const blogId = button.getAttribute('data-blog-id');
+                window.location.href = `/CRUD/dashboard.html?id=${blogId}`; // Redirect to the edit page with the blogId as a query parameter
+            });
+        });
     })
     .catch(error => console.error('Error fetching blogs:', error));
+
+// Function to delete a blog by its ID
+function deleteBlog(blogId) {
+    // Confirm with the user before deleting the blog
+    const confirmation = confirm("Are you sure you want to delete this blog?");
+    if (!confirmation) {
+        return; // If user cancels, do nothing
+    }
+
+    fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        showToast("Blog deleted successfully!");
+    })
+    .catch(error => console.error("Error deleting blog:", error));
+}
+
+// Function to display toast notification
+function showToast(message) {
+    Toastify({
+        text: message,
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+    }).showToast();
+}

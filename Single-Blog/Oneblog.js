@@ -3,7 +3,7 @@ const url = 'https://mybrand-be-6rxz.onrender.com'
 const currentUrl = new URL(window.location.href);
 const searchParams = new URLSearchParams(currentUrl.search);
 const blogId = searchParams.get("id");
-console.log("blogId", blogId);
+// console.log("blogId", blogId);
 
 
 
@@ -15,9 +15,7 @@ fetch('https://mybrand-be-6rxz.onrender.com' + `/api/blogs/${blogId}`)
         blogs.innerHTML = `
     <div class="part-1">
     <h1 class="gen-1"><span id="single-1">${blog.title}</h1>
-    <p class="sub-part-1">is a dynamic field, and the specific skills required can vary depending<br>
-        on the type of development (e.g., web development, mobile app<br>
-        development, data science) and the technologies involved</p>
+    <p class="sub-part-1">
     <p class="dec-1">${blog.createdAt}</p>
     <img src="${blog.image}" alt="pic-1" class="img-1">
 
@@ -76,10 +74,10 @@ fetch('https://mybrand-be-6rxz.onrender.com' + `/api/blogs/${blogId}`)
               <span class="text-1">
                   <p class="nom-1">${comment.name}</p>
                   <h3>${comment.email}</h3>
-                  <p>${comment.message}</p>
+                  <p>${comment.idea}</p>
                   <span class="sec-1">
-                      <a href="#" id="anc-1">Like</a> .
-                      <a href="#" id="anc-1">Reply</a> . 23h
+
+                      <a href="#" id="anc-1">Reply</a>
                   </span>
               </span>
           </div>
@@ -176,6 +174,10 @@ function validateInputs() {
                                 // User created successfully
                                 console.log("comments created successfully");
                                 showToast("comments created successfully");
+
+                                userName.value = '';
+                                email.value = '';
+                                locate.value = '';
                             } else {
                                 // creating a comment
                                 console.error("creating a comment failed");
