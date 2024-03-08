@@ -76,7 +76,7 @@ function validateInputs() {
 
               localStorage.setItem('token', token)
               // console.log(token)
-              window.location.href = "/Adminpanel/Admin.html";
+              window.location.href = "/Admin-panel/Admin.html";
               // document.cookie = `userToken=${response.token}; path=/`;
 
             } else {
