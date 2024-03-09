@@ -16,6 +16,7 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
             blogElement.innerHTML = `
                 <img src="${blog.image}" alt="img-box6" class="img-box6">
                 <p class="cont-box6-p">
+                <div class="like-btn"><i class="fa-regular fa-thumbs-up" id="likes"></i>&nbsp;<p class="singleLike">${blog.like}</p></div>
                     <h3>${blog.updatedAt}</h3>
                 </p>
                 <h2 id="titleValue">${blog.title}</h2>
@@ -72,7 +73,7 @@ function deleteBlog(blogId) {
 function showToast(message) {
     Toastify({
         text: message,
-        duration: 3000,
+        duration: 4000,
         gravity: "top",
         position: "right",
     }).showToast();

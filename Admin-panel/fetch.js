@@ -55,3 +55,11 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/query')
             })
             .catch(error => console.error('Error fetching blogs:', error));
         
+            document.getElementById('log-1').addEventListener('click', function() {
+                // Remove the token from local storage
+                localStorage.removeItem('token');
+                
+                // Redirect to another page
+                window.location.href = '/Login/Login.html';
+            });
+            

@@ -17,6 +17,11 @@ async function createBlog() {
 
     const token = localStorage.getItem("token");
 
+    if (!token) {
+        window.location.href = '/LogIn/Login.html';
+        return; 
+    }
+
     const formData = new FormData();
     formData.append("title", titleValue);
     formData.append("content", content);
@@ -110,7 +115,6 @@ fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`)
     .then(blog => {
         // Populate the input fields with the existing data
         document.getElementById('title').value = blog.title;
-        // document.getElementById('image').value = blog.image;
         quill.setText(blog.content);
 
         // Store the blog object for reference when updating
@@ -122,19 +126,15 @@ fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`)
 function updateBlog() {
     const updatedData = {
         title: document.getElementById('title').value,
-        // image: document.getElementById('image').value, // Don't include image as it's a file input
         content: quill.getText()
     };
-
-    // Merge the updated data with existing data
-    const mergedData = { ...window.blog, ...updatedData };
 
     fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(mergedData)
+        body: JSON.stringify(updatedData)
     })
     .then(response => {
         if (!response.ok) {
@@ -163,9 +163,7 @@ function showToast(message) {
 
 
 
-
-
-// // Fetch the specific blog's details using the blog ID
+// Fetch the specific blog's details using the blog ID
 // fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`)
 //     .then(response => {
 //         if (!response.ok) {
@@ -177,16 +175,16 @@ function showToast(message) {
 //         // Populate the input fields with the existing data
 //         document.getElementById('title').value = blog.title;
 //         // document.getElementById('image').value = blog.image;
-//         document.getElementById('content').value = blog.content;
+//         quill.setText(blog.content);
 //     })
 //     .catch(error => console.error('Error fetching blog details:', error));
 
-// Function to update the blog with edited data
+// // Function to update the blog with edited data
 // function updateBlog() {
 //     const updatedData = {
 //         title: document.getElementById('title').value,
 //         // image: document.getElementById('image').value,
-//         content: document.getElementById('content').value
+//        content: quill.getText()
 //     };
 
 // // Fetch the specific blog's details using the blog ID
@@ -201,10 +199,6 @@ function showToast(message) {
 //         // Populate the input fields with the existing data
 //         document.getElementById('title').value = blog.title;
 //         document.getElementById('content').value = blog.content;
-
-//         // Display the image preview
-//         const imagePreview = document.getElementById('image');
-//         imagePreview.src = blog.image; // Assuming 'image-preview' is the ID of the <img> tag where you want to display the preview
 //     })
 //     .catch(error => console.error('Error fetching blog details:', error));
 

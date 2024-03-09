@@ -53,7 +53,7 @@ body {
   font-family: "Work Sans";
   overflow-x: hidden;
   background: var(--BG-Shade, #f5fcff);
-  transition:  900ms ease-in-out;
+  transition: all 3s ease-in-out;
 }
 .container-1 {
   display: flex;
@@ -500,7 +500,9 @@ z-index: 1;
   }
   #quickSub{
     display: flex;
-padding: 12px 24px;
+    align-items: center;
+    text-align: center;
+padding: 12px 200px;
 cursor: pointer;
 gap: 12px;
 border-radius: 4px;
