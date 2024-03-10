@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+*{
+  transition: 300ms ease-in-out;
+}
 :root {
   --Primary-500: #a53dff;
   --Body: #1c1e53;
@@ -177,7 +180,6 @@ body {
   height: 100vh;
   overflow-x: hidden;
   font-family: "Work Sans";
-  transition:  900ms ease-in-out;
 }
 #scroll-1{
   position: fixed;

@@ -1,3 +1,6 @@
+*{
+  transition:  900ms ease-in-out;
+}
 .header-1 {
   display: flex;
   width: 100%;

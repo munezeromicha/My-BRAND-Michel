@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+*{
+  transition:  900ms ease-in-out;
+}
 body {
   font-family: "Work Sans";
   overflow-x: hidden;
   background: var(--BG-Shade, #f5fcff);
-  transition:  900ms ease-in-out;
 }
 .whole-page{
     display: flex;

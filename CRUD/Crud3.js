@@ -66,7 +66,7 @@ function validateInputs() {
     if (oneTitle === '') {
         verError(title, 'Please fill in the title field.');
     } else {
-        if (!photoInput.files || photoInput.files.length === 0) {
+        if (!photo.files || photo.files.length === 0) {
             verError(photoInput, 'Please select a photo.');
         } else {
             if (richText === '') {
@@ -98,11 +98,12 @@ function verPass(Element) {
     }
 }
 
+// End of blog creation
+
 
 // Get the blog ID from the URL query parameter
 const urlParams = new URLSearchParams(window.location.search);
 const blogId = urlParams.get('id');
-
 
 // Fetch the specific blog's details using the blog ID
 fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`)
@@ -124,17 +125,17 @@ fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`)
 
 // Function to update the blog with edited data
 function updateBlog() {
-    const updatedData = {
+    const updateData = {
         title: document.getElementById('title').value,
         content: quill.getText()
     };
-
+    console.log(updateData);
     fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(updatedData)
+        body: JSON.stringify(updateData)
     })
     .then(response => {
         if (!response.ok) {
@@ -146,8 +147,8 @@ function updateBlog() {
         showToast("Blog edited successfully!");
         window.location.href = "/CRUD2/addBlog.html";
 
-        title.value = '';
-        rich.value = '';
+        // title.value = '';
+        // rich.value = '';
     })
     .catch(error => console.error("Error editing blog:", error));
 }
@@ -181,7 +182,7 @@ function logoutUser() {
     // Clear token from local storage
     localStorage.removeItem('token');
     // Redirect to login page
-    window.location.href = '/login.html';
+    window.location.href = '/LogIn/Login.html';
   }
 
 

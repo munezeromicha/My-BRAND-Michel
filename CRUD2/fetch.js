@@ -99,5 +99,5 @@ function logoutUser() {
     // Clear token from local storage
     localStorage.removeItem('token');
     // Redirect to login page
-    window.location.href = '/login.html';
+    window.location.href = '/LogIn/Login.html';
   }

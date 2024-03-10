@@ -1,10 +1,10 @@
+*{
+  transition:  900ms ease-in-out;
+}
 .over-box {
   display: flex;
   gap: 20px;
   transition: all 500ms ease-in-out;
-}
-body{
-
 }
 #tag-1{
   text-decoration: none;

@@ -1,5 +1,6 @@
 *{
-    font-family: "Work Sans";
+  font-family: "Work Sans";
+  transition:  900ms ease-in-out;
 }
 #Blogs{
     display: flex;

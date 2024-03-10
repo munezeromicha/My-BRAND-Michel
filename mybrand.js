@@ -225,15 +225,15 @@ function storeLikedBlog(blogId) {
     // fetchBlogs();
 // the beggining of slide function
 
-// function toggleMenu() {
-//     // alert("I am clicked!");
-//     const menu = document.querySelector('.menu');
-//     menu.classList.toggle('active');
-// }
-// function closeMenu() {
-//     const menu = document.querySelector('.menu');
-//     menu.classList.remove('active');
-// }
+function toggleMenu() {
+    // alert("I am clicked!");
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+function closeMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('active');
+}
 
 // function xScroll(horizontal){
 //     const first = document.querySelector('.box6-over')

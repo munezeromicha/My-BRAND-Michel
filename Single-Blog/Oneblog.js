@@ -191,7 +191,7 @@ function validateInputs() {
                     })
                         .then(response => {
                             if (response.ok) {
-                                // User created successfully
+                                // comment created successfully
                                 console.log("comments created successfully");
                                 showToast("comments created successfully");
 
