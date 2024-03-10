@@ -5,12 +5,29 @@
   --Gray-500: #424e60;
 }
 #like{
-  font-size: 20px;
+  font-size: 23px;
   cursor: pointer;
+  color:	#b02744;
 }
 #comment{
   font-size: 20px;
-  cursor: pointer;
+  color: #3498DB;
+}
+#singleComment{
+  font-size: 15px;
+}
+#icon-comment{
+  display: flex;
+  flex-direction: row;
+}
+.singleLike{
+  font-size: 20px;
+}
+.like-btn{
+  display: flex;
+  gap: 10px;
+  background: transparent;
+  border: none;
 }
 .other-box{
   display: flex;

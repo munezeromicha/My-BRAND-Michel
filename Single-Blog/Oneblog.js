@@ -5,6 +5,29 @@ const searchParams = new URLSearchParams(currentUrl.search);
 const blogId = searchParams.get("id");
 // console.log("blogId", blogId);
 
+if (blogId) {
+    fetch('https://mybrand-be-6rxz.onrender.com' + `/api/blogs/${blogId}/comments`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const commentCount = data.length;
+
+            const blogElement = document.createElement('div');
+            blogElement.innerHTML = `
+                <h2 id="text-comment">Total Comments</h2>
+                <p id="text-value">${commentCount} <i class="fa-solid fa-comments"></i></i></p>
+            `;
+            const blogsContainer = document.querySelector('.container');
+            blogsContainer.appendChild(blogElement);
+        })
+        .catch(error => console.error('Error fetching comments:', error));
+} else {
+    console.error('Blog ID not found in URL');
+}
 
 
 const blogs = document.querySelector(".container");
@@ -41,12 +64,11 @@ fetch('https://mybrand-be-6rxz.onrender.com' + `/api/blogs/${blogId}`)
         </span>
 
     </div>
-
-
     <p class="desc-2"> ${blog.content} <br><br>
 
         Tkanks for reading. </br>
         Michael</p>
+        <h2 id="text-like">Total likes</h2> <div id="icon-like"> ${blog.like} <i class="fa-solid fa-thumbs-up"></i></div>
     `;
 
         // Fetch comments
@@ -66,8 +88,6 @@ fetch('https://mybrand-be-6rxz.onrender.com' + `/api/blogs/${blogId}`)
 
                     const commentElement = document.createElement("div");
                     commentElement.innerHTML = `
-         
-          
             
           <div class="com-2">
               <i class="fa-solid fa-circle-user" id="av-1"></i>

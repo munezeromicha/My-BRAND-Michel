@@ -78,3 +78,26 @@ function showToast(message) {
         position: "right",
     }).showToast();
 }
+
+  //check the authenticated user
+
+  function checkAuthentication() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      // Redirect to login page if token is not present
+      window.location.href = '/LogIn/Login.html';
+    }
+  }
+  
+  // Call checkAuthentication when the dashboard page loads
+  window.addEventListener('DOMContentLoaded', () => {
+    checkAuthentication();
+  });
+
+  // Function to logout
+function logoutUser() {
+    // Clear token from local storage
+    localStorage.removeItem('token');
+    // Redirect to login page
+    window.location.href = '/login.html';
+  }

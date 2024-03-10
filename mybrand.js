@@ -1,3 +1,5 @@
+
+
 fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
     .then(response => {
         if (!response.ok) {
@@ -18,8 +20,9 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
             blogElement.innerHTML = `
                 <img src="${blog.image}" alt="img-box6" class="img-box6">
                 <p class="cont-box6-p">
-                    <div class="like-btn"><i class="fa-regular fa-thumbs-up"></i>&nbsp;<p class="singleLike">${blog.like}</p></div>
-                    <span><i class="fa-solid fa-comment"></i> 246 Comments </span>   
+                    <button class="like-btn" ${hasLikedBlog(blog._id) ? 'disabled' : ''}><i class="fa-solid fa-heart" id="like"></i><span class="singleLike">${blog.like}</span></button>
+                    
+                    <span id="icon-comment"><i class="fa-solid fa-comment" id="comment"></i><p id="singleComment"> 246 Comments </p></span>   
                 </p>
                 <h2>${blog.title}</h2>
                 <p class="cont-desc-p">${truncatedContent}</p>
@@ -44,6 +47,10 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
                     const data = await response.json();
                     // Update the like count on the UI
                     likeCountElement.textContent = data.likes;
+                    // Disable the like button after clicking
+                    likeButton.disabled = true;
+                    // Store the liked blog in local storage
+                    storeLikedBlog(blog._id);
                 } catch (error) {
                     console.error("Error liking the blog:", error);
                 }
@@ -60,6 +67,21 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
         });
     })
     .catch(error => console.error('Error fetching blogs:', error));
+
+// Function to check if the user has already liked a specific blog
+function hasLikedBlog(blogId) {
+    const likedBlogs = JSON.parse(localStorage.getItem("likedBlogs")) || [];
+    return likedBlogs.includes(blogId);
+}
+
+// Function to store the ID of the liked blog in local storage
+function storeLikedBlog(blogId) {
+    const likedBlogs = JSON.parse(localStorage.getItem("likedBlogs")) || [];
+    likedBlogs.push(blogId);
+    localStorage.setItem("likedBlogs", JSON.stringify(likedBlogs));
+}
+
+
 
 
 
