@@ -414,7 +414,7 @@ background: #FFF;
   font-weight: 600;
   line-height: normal;
   }
-  #del-btn{
+  .del-btn{
     font-size: 12px;
     color: red;
     font-weight: 500;
