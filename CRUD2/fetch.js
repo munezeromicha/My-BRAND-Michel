@@ -55,7 +55,10 @@ function deleteBlog(blogId) {
     }
 
     fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
     })
     .then(response => {
         if (!response.ok) {

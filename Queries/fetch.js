@@ -1,4 +1,9 @@
-fetch('https://mybrand-be-6rxz.onrender.com/api/query')
+fetch('https://mybrand-be-6rxz.onrender.com/api/query',{
+    method: 'GET',
+    headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+    }
+})
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');

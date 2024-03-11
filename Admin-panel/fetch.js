@@ -1,4 +1,9 @@
-fetch('https://mybrand-be-6rxz.onrender.com/api/query')
+fetch('https://mybrand-be-6rxz.onrender.com/api/query',{
+    method: 'GET',
+    headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+    }
+})
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -36,7 +41,12 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/query')
     .catch(error => console.error("Error fetching queries:", error));
 
 
-fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
+fetch('https://mybrand-be-6rxz.onrender.com/api/blogs',{
+    method: 'GET',
+    headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+    }
+})
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -59,7 +69,12 @@ fetch('https://mybrand-be-6rxz.onrender.com/api/blogs')
     .catch(error => console.error('Error fetching blogs:', error));
 
 
-fetch('https://mybrand-be-6rxz.onrender.com/api/query')
+    fetch('https://mybrand-be-6rxz.onrender.com/api/query',{
+        method: 'GET',
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+    })
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');

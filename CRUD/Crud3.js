@@ -133,7 +133,7 @@ function updateBlog() {
     fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`, {
         method: 'PATCH',
         headers: {
-            'Content-Type': 'application/json'
+            Authorization: `Bearer ${localStorage.getItem('token')}`
         },
         body: JSON.stringify(updateData)
     })
