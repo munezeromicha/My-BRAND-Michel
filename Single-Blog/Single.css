@@ -174,21 +174,35 @@ word-break: break-all;
 width: 100%;
 text-wrap: wrap;
 }
+#over-com{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #comment{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
   gap: 40px;
   padding: 7px;
+  width: 90%;
+  
+}
+.com-2{
+  /* border: 0.5px solid #000; */
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .com-1{
   display: flex;
+  justify-content: center;
+  align-items: center;
   color: #503AE7;
-  text-wrap: ;}
-.com-2{
-  display: flex;
-  gap: 12px;
 }
 .text-1{
   display: flex;
@@ -219,7 +233,7 @@ line-height: normal;
 }
 #av-1{
   /* border: 1px solid #000; */
-font-size: 30px;
+font-size: 40px;
   
 }
 .line-3{
@@ -371,6 +385,11 @@ label{
 #email_1:focus{
   outline: 0;
 }
+/* #email{
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+} */
 #mess{
   border: 0.5px solid #5e3bee;
   border-radius: 5px;

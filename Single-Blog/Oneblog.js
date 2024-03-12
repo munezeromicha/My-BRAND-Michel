@@ -93,7 +93,7 @@ fetch('https://mybrand-be-6rxz.onrender.com' + `/api/blogs/${blogId}`)
               <i class="fa-solid fa-circle-user" id="av-1"></i>
               <span class="text-1">
                   <p class="nom-1">${comment.name}</p>
-                  <h3>${comment.email}</h3>
+                  <h3 id="email">${comment.email}</h3>
                   <p>${comment.idea}</p>
                   <span class="sec-1">
 
