@@ -68,6 +68,7 @@ function deleteBlog(blogId) {
     })
     .then(data => {
         showToast("Blog deleted successfully!");
+        window.location.reload();
     })
     .catch(error => console.error("Error deleting blog:", error));
 }

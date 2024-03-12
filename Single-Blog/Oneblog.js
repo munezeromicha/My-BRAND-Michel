@@ -194,7 +194,7 @@ function validateInputs() {
                                 // comment created successfully
                                 console.log("comments created successfully");
                                 showToast("comments created successfully");
-
+                                location.reload();
                                 userName.value = '';
                                 email.value = '';
                                 locate.value = '';
