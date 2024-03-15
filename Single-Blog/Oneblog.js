@@ -68,7 +68,8 @@ fetch('https://mybrand-be-6rxz.onrender.com' + `/api/blogs/${blogId}`)
 
         Tkanks for reading. </br>
         Michael</p>
-        <h2 id="text-like">Total likes</h2> <div id="icon-like"> ${blog.like} <i class="fa-solid fa-thumbs-up"></i></div>
+        <h2 id="text-like">Total likes</h2> <div id="icon-like"> ${blog.like} <i class="fa-solid fa-thumbs-up"></i>
+        </div>
     `;
 
         // Fetch comments

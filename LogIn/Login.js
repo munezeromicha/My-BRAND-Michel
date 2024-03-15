@@ -31,7 +31,6 @@ function validateInputs() {
   const inEmail = email.value.trim();
   const firstPass = pass.value.trim();
 
-
   if (inEmail === '') {
     verError(email, 'Email field is Required!');
   }
@@ -39,24 +38,19 @@ function validateInputs() {
     verError(email, 'Enter the valid email!');
   }
   else {
-    // verPass(email)
     if (firstPass === '') {
       verError(pass, 'Password is required!')
     } else if (firstPass.length < 8) {
       verError(pass, 'Password must be at least 8 character!')
     }
     else {
-      // verPass(pass)
-
       const body = {
         email: inEmail,
         password: firstPass
       };
 
-
-      // Function to perform login
       function loginUser(body) {
-        // Assuming you're using fetch for API calls
+
         fetch('https://mybrand-be-6rxz.onrender.com/api/login', {
           method: 'POST',
           headers: {
@@ -68,21 +62,20 @@ function validateInputs() {
           .then(async response => {
 
             if (response.status) {
-              // User logged in successfully
+
               console.log("User logged in successfully");
               showToast("Login successful");
 
               const token = response.token
 
               localStorage.setItem('token', token)
-              // console.log(token)
+
               window.location.href = "/Admin-panel/Admin.html";
-              // document.cookie = `userToken=${response.token}; path=/`;
 
             } else {
-              // Login failed
+
               console.error("Login failed");
-              showToast("Login failed");
+              alert("Login failed");
             }
           })
           .catch(error => {
@@ -90,24 +83,8 @@ function validateInputs() {
             showToast("Error occurred");
           });
       }
-
-      // Function to show toast notification
-      function showToast(message) {
-        Toastify({
-          text: message,
-          duration: 3000,
-          gravity: "top",
-          position: "right",
-        }).showToast();
-      }
-
-
       loginUser(body);
-
-
     }
-
-
 
   }
 }
