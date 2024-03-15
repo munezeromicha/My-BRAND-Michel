@@ -31,12 +31,13 @@ fetch(`https://mybrand-be-6rxz.onrender.com/api/blogs/${blogId}`)
         window.blog = blog;
     })
     .catch(error => console.error('Error fetching blog details:', error));
+    
 
 // Function to update the blog with edited data
 function updateBlog() {
     const updatedData = {
         title: document.getElementById('title').value,
-        content: quill.root.innerHTML  
+        content: quill.root.innerHTML  // Retrieve content as HTML
     };
     console.log(updatedData); 
 
@@ -57,12 +58,10 @@ function updateBlog() {
     .then(data => {
         showToast("Blog edited successfully!");
         window.location.href = "/CRUD2/addBlog.html";
-
-        // title.value = '';
-        // rich.value = '';
     })
     .catch(error => console.error("Error editing blog:", error));
 }
+
 
 
 function showToast(message) {

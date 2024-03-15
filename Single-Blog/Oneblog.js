@@ -19,7 +19,7 @@ if (blogId) {
             const blogElement = document.createElement('div');
             blogElement.innerHTML = `
                 <h2 id="text-comment">Total Comments</h2>
-                <p id="text-value">${commentCount} <i class="fa-solid fa-comments"></i></i></p>
+                <p id="text-value"><i class="fa-solid fa-comments"></i></i></p>
             `;
             const blogsContainer = document.querySelector('.container');
             blogsContainer.appendChild(blogElement);
@@ -38,8 +38,7 @@ fetch('https://mybrand-be-6rxz.onrender.com' + `/api/blogs/${blogId}`)
         blogs.innerHTML = `
     <div class="part-1">
     <h1 class="gen-1"><span id="single-1">${blog.title}</h1>
-    <p class="sub-part-1">
-    <p class="dec-1">${blog.createdAt}</p>
+    
     <img src="${blog.image}" alt="pic-1" class="img-1">
 
 </div>

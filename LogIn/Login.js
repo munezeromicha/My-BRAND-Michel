@@ -83,6 +83,16 @@ function validateInputs() {
             showToast("Error occurred");
           });
       }
+
+      function showToast(message) {
+        Toastify({
+            text: message,
+            duration: 3000,
+            gravity: "top",
+            position: "right",
+        }).showToast();
+    }
+
       loginUser(body);
     }
 

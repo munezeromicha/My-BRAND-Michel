@@ -1,7 +1,7 @@
 var form = document.getElementById("form");
 var title = document.getElementById("title");
 var photoInput = document.getElementById("image");
-var rich = quill.getText();
+var rich = new Quill('#editor');
 
 if (form) {
     form.addEventListener('submit', function (e) {
@@ -11,7 +11,7 @@ if (form) {
 }
 
 async function createBlog() {
-    const content =  quill.getText().trim();
+    const content = rich.root.innerHTML.trim(); // Use Quill's HTML content to ensure formatting
     const titleValue = title.value.trim();
     const image = photoInput.files[0];
 
@@ -19,7 +19,7 @@ async function createBlog() {
 
     if (!token) {
         window.location.href = '/LogIn/Login.html';
-        return; 
+        return;
     }
 
     const formData = new FormData();
@@ -41,27 +41,27 @@ async function createBlog() {
 
     const data = await response.json();
     showToast("Blog created successfully!!");
-    
+
     title.value = '';
     photoInput.value = '';
-    rich.value = '';
+    rich.setContents([{ insert: '\n' }]); // Clear Quill editor content after submission
     window.location.href = '/CRUD2/addBlog.html';
 
     function showToast(message) {
         Toastify({
-          text: message,
-          duration: 3000,
-          gravity: "top",
-          position: "right",
+            text: message,
+            duration: 3000,
+            gravity: "top",
+            position: "right",
         }).showToast();
-      }
+    }
 }
 
 function validateInputs() {
     if (!title || !photoInput || !rich) return;
 
     var oneTitle = title.value.trim();
-    var richText = quill.getText().trim();
+    var richText = rich.getText().trim(); // Use Quill's getText() method
     var photo = photoInput.value;
 
     if (oneTitle === '') {

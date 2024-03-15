@@ -21,9 +21,11 @@ html {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  z-index: -1;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  /* z-index: -1; */
+  width: 90%;
 }
 .logo-1 {
   display: flex;
@@ -160,23 +162,23 @@ line-height: 150%; /* 36px */
 .line-2{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  margin-left: 32%;
+  /* align-items:center; */
   gap: 15px;
-
 }
+
 .desc-2{
   display: flex;
-  justify-content: center;
-  align-items: center;
-font-size: 21.333px;
-/* font-style: normal; */
-font-weight: 400;
-line-height: 1.5;
-word-break: break-all;
-text-align: start;
-width: 90%;
-margin-bottom: 20px;
+  /* justify-content: start;
+  align-items: start;
+  text-align: start; */
+  font-size: 23.333px;
+  font-style: normal;
+  font-weight: 400;
+  word-break: break-all;
+  width: 90%;
+  /* margin-bottom: 20px; */
 
 }
 #over-com{
